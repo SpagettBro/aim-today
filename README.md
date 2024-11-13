@@ -28,23 +28,23 @@ Hieronder volgen de stappen om het project op te zetten en uit te voeren.
 
     Repository Clonen:
 
-git clone <repository_url>
-cd aim-today
+    git clone <repository_url>
+    cd aim-today
 
-Dependencies Installeren: Installeer de benodigde dependencies:
+    Dependencies Installeren: Installeer de benodigde dependencies:
 
-npm install
+    npm install
 
-Storyblok API Sleutel Configureren: Vraag een Storyblok API-sleutel aan en voeg deze toe aan de .env.local-bestand (zie Configuratie hieronder).
+    Storyblok API Sleutel Configureren: Vraag een Storyblok API-sleutel aan en voeg deze toe aan de .env.local-bestand (zie Configuratie hieronder).
 
-Applicatie Starten: Start de ontwikkelserver:
+    Applicatie Starten: Start de ontwikkelserver:
 
-npm run dev
+    npm run dev
 
-Build Productie: Voor productie-build:
+    Build Productie: Voor productie-build:
 
-    npm run build
-    npm start
+        npm run build
+        npm start
 
 ## Configuratie
 
