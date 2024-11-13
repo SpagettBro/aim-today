@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AIM Today
 
-## Getting Started
+## Inhoudsopgave
 
-First, run the development server:
+    Project Overzicht
+    Technologieën
+    Stappen
+    Configuratie
+    Gebruik
 
-```bash
+## Project Overzicht
+
+AIM Today is een platform dat professionals in marketing, communicatie en ondernemerschap op de hoogte houdt van de laatste trends, inzichten en ontwikkelingen in de marketingwereld. De website biedt dagelijkse artikelen, analyses, interviews met experts, casestudies, en marktdata. Gebruikers kunnen zich daarnaast abonneren op nieuwsbrieven en deelnemen aan webinars en evenementen om verder geïnformeerd en betrokken te blijven.
+
+## Technologieën
+
+Het project maakt gebruik van de volgende technologieën en frameworks:
+
+    Next.js: Voor server-side rendering en optimalisatie van de gebruikerservaring.
+    React.js: Voor de component-based frontend-architectuur.
+    JavaScript: Voor dynamische functionaliteit en interactiviteit.
+    Storyblok: Als headless CMS voor contentbeheer en het dynamisch laden van artikelen, evenementen en andere content.
+    CSS / SCSS: Voor het ontwerpen en stylen van de gebruikersinterface.
+
+## Stappen
+
+Hieronder volgen de stappen om het project op te zetten en uit te voeren.
+
+    Repository Clonen:
+
+git clone <repository_url>
+cd aim-today
+
+Dependencies Installeren: Installeer de benodigde dependencies:
+
+npm install
+
+Storyblok API Sleutel Configureren: Vraag een Storyblok API-sleutel aan en voeg deze toe aan de .env.local-bestand (zie Configuratie hieronder).
+
+Applicatie Starten: Start de ontwikkelserver:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build Productie: Voor productie-build:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+    npm run build
+    npm start
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Configuratie
 
-## Learn More
+Voeg een .env.local-bestand toe in de hoofdmap van het project met de volgende omgeving variabelen:
 
-To learn more about Next.js, take a look at the following resources:
+NEXT_PUBLIC_STORYBLOK_ACCESS_TOKEN=your_storyblok_api_key
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Vervang your_storyblok_api_key door de daadwerkelijke API-sleutel van je Storyblok-project.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Gebruik
 
-## Deploy on Vercel
+Starten van de Applicatie
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    Ontwikkelomgeving: Gebruik npm run dev om de app in een lokale ontwikkelomgeving te draaien. De applicatie is standaard bereikbaar op http://localhost:3000.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    Productieomgeving: Na het uitvoeren van npm run build en npm start, draait de applicatie in productie op dezelfde poort of op een server naar keuze.
