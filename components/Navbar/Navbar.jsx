@@ -9,70 +9,130 @@ const Navbar = ({ blok }) => {
   };
 
   return (
-    <div className="header-container" {...storyblokEditable(blok)}>
-      <div className="header-content">
-        {/* Logo */}
-        <img
-          className="logo"
-          src={blok.logo.filename}
-          alt={blok.logo.alt || "Logo"}
-        />
+    <header
+      className="bg-white w-full border-b border-gray-300 z-10"
+      {...storyblokEditable(blok)}
+    >
+      <div className="flex items-center justify-between max-w-7xl mx-auto py-3">
+        {/* Logo on the far left */}
+        <div className="flex-shrink-0">
+          <img
+            src={blok.logo.filename}
+            alt={blok.logo.alt || "News Logo"}
+            className="h-[50px] w-auto"
+          />
+        </div>
 
-        {/* Navigation */}
-        <nav className={`navigation ${menuOpen ? "menu-open" : ""}`}>
-          <ul className="navigation-list">
-            {/* About Us */}
-            <li>
-              <a href="/about-us" className="nav-link">
-                {blok.heads}
-              </a>
-            </li>
+        {/* Navigation and Buttons with Padding */}
+        <div className="flex items-center justify-between flex-grow ml-[30px]">
+          {/* Navigation */}
+          <nav className="hidden lg:flex space-x-6">
+            <a
+              href="/world"
+              className="text-gray-500 group hover:text-black transition duration-300 px-[10px]"
+            >
+              Nieuws
+              <span className="block w-full h-[2px] bg-orange-500 opacity-0 group-hover:opacity-100 transition-all"></span>
+            </a>
+            <a
+              href="/politics"
+              className="text-gray-500 group hover:text-black transition duration-300 px-[10px]"
+            >
+              Interviews
+              <span className="block w-full h-[2px] bg-orange-500 opacity-0 group-hover:opacity-100 transition-all"></span>
+            </a>
+            <a
+              href="/business"
+              className="text-gray-500 group hover:text-black transition duration-300 px-[10px]"
+            >
+              Artikelen
+              <span className="block w-full h-[2px] bg-orange-500 opacity-0 group-hover:opacity-100 transition-all"></span>
+            </a>
+            <a
+              href="/tech"
+              className="text-gray-500 group hover:text-black transition duration-300 px-[10px]"
+            >
+              Evenementen
+              <span className="block w-full h-[2px] bg-orange-500 opacity-0 group-hover:opacity-100 transition-all"></span>
+            </a>
+          </nav>
 
-            {/* Services Dropdown */}
-            <li className="dropdown">
-              <a href="#" className="nav-link">
-                Services
-              </a>
-              <div className="dropdown-menu">
-                <a href="/service-1" className="dropdown-item">
-                  Service 1
-                </a>
-                <a href="/service-2" className="dropdown-item">
-                  Service 2
-                </a>
-                <a href="/service-3" className="dropdown-item">
-                  Service 3
-                </a>
-              </div>
-            </li>
+          {/* Subscription and Login Buttons (Hidden on Mobile) */}
+          <div className="hidden lg:flex items-center space-x-4 ml-[225px]">
+            <button className="text-gray-500 hover:text-black transition duration-300">
+              Log In
+            </button>
+            <button className="text-white bg-DonkerBlauw px-[15px] py-[10px] rounded-md">
+              Word Abbonee
+            </button>
+          </div>
+        </div>
 
-            {/* Pricing */}
-            <li>
-              <a href="pricing" className="nav-link">
-                Pricing
-              </a>
-            </li>
-
-            {/* Training */}
-            <li>
-              <a href="/training" className="nav-link">
-                Training
-              </a>
-            </li>
-          </ul>
-        </nav>
-
-        {/* Contact Us */}
-        <a href="/contact" className="contact-button">
-          Contact Us
-        </a>
-
-        {/* Hamburger Menu Button for Mobile */}
-        <button className="menu-button" onClick={toggleMenu}>
-          <span className={`hamburger ${menuOpen ? "open" : ""}`}></span>
+        {/* Hamburger Menu for Mobile */}
+        <button
+          className="lg:hidden p-2 text-gray-500 focus:outline-none"
+          onClick={toggleMenu}
+        >
+          <span
+            className={`block w-6 h-0.5 bg-gray-500 mb-1 transition-all duration-300 ${
+              menuOpen ? "transform rotate-45" : ""
+            }`}
+          ></span>
+          <span
+            className={`block w-6 h-0.5 bg-gray-500 mb-1 transition-all duration-300 ${
+              menuOpen ? "hidden" : ""
+            }`}
+          ></span>
+          <span
+            className={`block w-6 h-0.5 bg-gray-500 transition-all duration-300 ${
+              menuOpen ? "-rotate-45" : ""
+            }`}
+          ></span>
         </button>
       </div>
-    </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <nav className="flex flex-col space-y-4 lg:hidden bg-white p-4 border-t border-gray-300">
+          <a
+            href="/"
+            className="text-gray-500 hover:text-black hover:underline hover:text-orange-500 transition duration-300"
+          >
+            Home
+          </a>
+          <a
+            href="/world"
+            className="text-gray-500 hover:text-black hover:underline hover:text-orange-500 transition duration-300"
+          >
+            World
+          </a>
+          <a
+            href="/politics"
+            className="text-gray-500 hover:text-black hover:underline hover:text-orange-500 transition duration-300"
+          >
+            Politics
+          </a>
+          <a
+            href="/business"
+            className="text-gray-500 hover:text-black hover:underline hover:text-orange-500 transition duration-300"
+          >
+            Business
+          </a>
+          <a
+            href="/tech"
+            className="text-gray-500 hover:text-black hover:underline hover:text-orange-500 transition duration-300"
+          >
+            Tech
+          </a>
+          <a
+            href="/sports"
+            className="text-gray-500 hover:text-black hover:underline hover:text-orange-500 transition duration-300"
+          >
+            Sports
+          </a>
+        </nav>
+      )}
+    </header>
   );
 };
 
