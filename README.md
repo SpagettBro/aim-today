@@ -2,11 +2,13 @@
 
 ## Inhoudsopgave
 
-    [Project Overzicht](#project-overzicht)
-    Technologieën
-    Stappen
-    Configuratie
-    Gebruik
+[Project Overzicht](#project-overzicht)
+[Technologieën](#technologieën)
+[Stappen](#stappen)
+[Configuratie](#configuratie)
+[Gebruik](#gebruik)
+[Vervolg](#vervolg)
+[Licentie](#licentie)
 
 ## Project Overzicht
 
@@ -61,3 +63,11 @@ Starten van de Applicatie
     Ontwikkelomgeving: Gebruik npm run dev om de app in een lokale ontwikkelomgeving te draaien. De applicatie is standaard bereikbaar op http://localhost:3000.
 
     Productieomgeving: Na het uitvoeren van npm run build en npm start, draait de applicatie in productie op dezelfde poort of op een server naar keuze.
+
+## Vervolg
+
+De volgende stap is om een pagina met veschillende componenten af te werken en om de connectie met storyblok te leggen zodat deze ook al uitgetest kan worden op de pagina.
+
+## Licentie
+
+Dit project is gelicentieerd onder een eigen licentie. Ongeautoriseerde kopieën, wijzigingen, distributie of enig ander gebruik van de code is strikt verboden zonder uitdrukkelijke toestemming van 2ManyDots. Alle rechten voorbehouden.
