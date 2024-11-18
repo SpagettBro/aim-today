@@ -6,22 +6,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        grey: '#808080',
-        darkGreen: '#012524',
-        darkTeal: '#003846',
-        offWhite: '#fdfff9',
-        pink: '#f4c5fe',
-        limeGreen: '#a8ff1a',
-        lightLime: '#eaffbc',
-        DonkerBlauw: '#264653',
-      },
-      backgroundImage: {
-        limeGradient: 'linear-gradient(#a8ff1a, #eaffbc)',
-        pinkGradient: 'linear-gradient(#f4c5fe, #eaffbc)',
-        tealGradient: 'linear-gradient(#003846, #fdfff9)',
+        grijs: '#ebeef3',
+        oranje: '#e76f51',
+        offWhite: '#fbfbf8',
+        donkerBlauw: '#264653',
       },
       spacing: {
         '30': '30px',
+      },
+      fontFamily: {
+        'dm-sans': ['DM Sans', 'sans-serif'],
+        'montserrat': ['Montserrat', 'sans-serif'],
       },
     },
   },
