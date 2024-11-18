@@ -2,7 +2,7 @@
 
 ## Inhoudsopgave
 
-    Project Overzicht
+    [Project Overzicht](#project-overzicht)
     Technologieën
     Stappen
     Configuratie
