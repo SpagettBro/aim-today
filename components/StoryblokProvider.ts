@@ -9,12 +9,14 @@ import Page from "./page.component";
 import Feature from "./Feature/Feature";
 import ThreeQuarterLayout from "./ThreeQuarterLayout/ThreeQuarterLayout";
 import Navbar from "./Navbar/Navbar";
+import Artikelheader from "./Artikelheader/Artikelheader";
 
 const components = {
   page: Page,
   feature: Feature,
   threequarterlayout: ThreeQuarterLayout,
   navbar: Navbar,
+  artikelheader: Artikelheader,
 };
 
 storyblokInit({

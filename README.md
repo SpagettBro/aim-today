@@ -2,12 +2,12 @@
 
 ## Inhoudsopgave
 
-[Project Overzicht](#project-overzicht)
-[Technologieën](#technologieën)
-[Stappen](#stappen)
-[Configuratie](#configuratie)
-[Gebruik](#gebruik)
-[Vervolg](#vervolg)
+[Project Overzicht](#project-overzicht)<br />
+[Technologieën](#technologieën)<br />
+[Stappen](#stappen)<br />
+[Configuratie](#configuratie)<br />
+[Gebruik](#gebruik)<br />
+[Vervolg](#vervolg)<br />
 [Licentie](#licentie)
 
 ## Project Overzicht
