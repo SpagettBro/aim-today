@@ -1,9 +1,6 @@
 import { storyblokEditable } from "@storyblok/react/rsc";
 import Image from 'next/image'; 
-<link
-  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@900&family=Montserrat:wght@400&display=swap"
-  rel="stylesheet"
-/>
+
 
 
 
