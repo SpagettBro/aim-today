@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 
 const Net_binnen_artikel = ({ blok }) => (
-  <div className="relative w-full px-4" {...storyblokEditable(blok)}>
+  <div className="relative w-full max-w-sm px-4" {...storyblokEditable(blok)}>
     <div className="mt-8 px-4">
       <div className="relative w-full max-w-[350px] mx-auto mt-4 flex gap-4">
               <div className="absolute inset-0 rounded-md transform translate-x-2 translate-y-2"></div>
