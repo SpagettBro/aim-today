@@ -10,8 +10,8 @@ import Feature from "./Feature/Feature";
 import ThreeQuarterLayout from "./ThreeQuarterLayout/ThreeQuarterLayout";
 import Navbar from "./Navbar/Navbar";
 import Footer from "./Footer/Footer";
-import Home_net_binnen from "./home/Home_net_binnen";
-import Net_binnen_artikel from "./home/Net_binnen_artikel";
+import Home_net_binnen from "./Home/Home_net_binnen";
+import Net_binnen_artikel from "./Net_binnen_artikel/Net_binnen_artikel";
 
 const components = {
   page: Page,
