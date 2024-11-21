@@ -10,6 +10,7 @@ import Feature from "./Feature/Feature";
 import ThreeQuarterLayout from "./ThreeQuarterLayout/ThreeQuarterLayout";
 import Navbar from "./Navbar/Navbar";
 import Home_net_binnen from "./home/Home_net_binnen";
+import Net_binnen_artikel from "./home/Net_binnen_artikel";
 
 const components = {
   page: Page,
@@ -17,6 +18,7 @@ const components = {
   threequarterlayout: ThreeQuarterLayout,
   navbar: Navbar,
   home_net_binnen: Home_net_binnen,
+  net_binnen_artikel: Net_binnen_artikel,
 };
 
 storyblokInit({
