@@ -10,6 +10,7 @@ import Feature from "./Feature/Feature";
 import ThreeQuarterLayout from "./ThreeQuarterLayout/ThreeQuarterLayout";
 import Navbar from "./Navbar/Navbar";
 import Artikelheader from "./Artikelheader/Artikelheader";
+import Artikelinhoud from "./Artikelinhoud/Artikelinhoud";
 
 const components = {
   page: Page,
@@ -17,6 +18,7 @@ const components = {
   threequarterlayout: ThreeQuarterLayout,
   navbar: Navbar,
   artikelheader: Artikelheader,
+  artikelinhoud: Artikelinhoud,
 };
 
 storyblokInit({

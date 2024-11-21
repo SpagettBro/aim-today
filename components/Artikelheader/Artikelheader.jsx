@@ -4,20 +4,20 @@ import { render } from "storyblok-rich-text-react-renderer";
 const Artikelheader = ({ blok }) => (
   <div {...storyblokEditable(blok)}>
     <div>
-      <div>
+      <div className="font-bold text-orange-600">
         {render(blok.categorietekst)} 
       </div>
-      <div>
+      <div className="font-bold">
         {render(blok.titeltekst)}
       </div>
-      <div className="flex">
+      <div className="flex font-extralight">
         {render(blok.auteurtekst)}
         {render(blok.datumtekst)}
         {render(blok.aantaltekst)}
       </div>
       <div>
         <img
-            className="artikelFoto"
+            className="w-full"
             src={blok.artikelfoto.filename}
             alt={blok.artikelfoto.alt || "over het artikel"}
           />
