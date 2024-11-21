@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { storyblokEditable } from "@storyblok/react/rsc";
 
 const Navbar = ({ blok }) => {
@@ -8,9 +8,20 @@ const Navbar = ({ blok }) => {
     setMenuOpen(!menuOpen);
   };
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
   return (
     <header
-      className="bg-white w-full border-b border-gray-300 z-10"
+      className="bg-white w-full border-b border-gray-300 z-10 px-6"
       {...storyblokEditable(blok)}
     >
       <div className="flex items-center justify-between max-w-7xl mx-auto py-3">
@@ -58,7 +69,7 @@ const Navbar = ({ blok }) => {
             <button className="text-gray-500 hover:text-black transition duration-300">
               Log In
             </button>
-            <button className="text-white bg-DonkerBlauw px-[15px] py-[10px] rounded-md">
+            <button className="text-white bg-donkerBlauw px-[15px] py-[10px] rounded-md">
               Word Abonnee
             </button>
           </div>
@@ -87,35 +98,53 @@ const Navbar = ({ blok }) => {
       </div>
 
       {menuOpen && (
-        <nav className="flex flex-col bg-gray-100 text-left p-6 space-y-4 shadow-md border-t border-gray-300 w-full lg:hidden">
-          <a
-            href="/nieuws"
-            className="text-gray-700 text-2xl hover:text-orange-500 transition-all flex justify-between items-center border-b border-gray-300 pb-6"
-          >
-            Nieuws
-            <span className="text-black font-bold text-xl">+</span>
-          </a>
-          <a
-            href="/interviews"
-            className="text-gray-700 text-2xl hover:text-orange-500 transition-all border-b border-gray-300 pb-6"
-          >
-            Interviews
-          </a>
-          <a
-            href="/artikelen"
-            className="text-gray-700 text-2xl hover:text-orange-500 transition-all border-b border-gray-300 pb-6"
-          >
-            Artikelen
-          </a>
-          <a
-            href="/evenementen"
-            className="text-gray-700 text-2xl hover:text-orange-500 transition-all border-b border-gray-300 pb-6"
-          >
-            Evenementen
-          </a>
-          <button className="bg-DarkBlue text-white px-4 py-[243px] rounded-md mt-4 self-start">
-            Word abonee
-          </button>
+        <nav className="fixed inset-0 bg-gray-100 shadow-md z-50 overflow-y-auto">
+          {/* Header sectie voor logo en sluitknop */}
+          <div className="flex items-center justify-between max-w-7xl mx-auto py-3 px-6 border-b border-gray-300">
+            <img
+              src={blok.logo.filename}
+              alt={blok.logo.alt || "News Logo"}
+              className="h-[50px] w-auto"
+            />
+            <button
+              onClick={toggleMenu}
+              className="text-gray-500 hover:text-black transition duration-300 focus:outline-none"
+            >
+              <span className="block w-6 h-0.5 bg-gray-500 mb-1 transform rotate-45"></span>
+              <span className="block w-6 h-0.5 bg-gray-500 transform -rotate-45"></span>
+            </button>
+          </div>
+
+          {/* Links sectie */}
+          <div className="p-6 space-y-4">
+            <a
+              href="/nieuws"
+              className="block text-gray-700 text-2xl hover:text-orange-500 transition-all border-b border-gray-300 pb-6"
+            >
+              Nieuws
+            </a>
+            <a
+              href="/interviews"
+              className="block text-gray-700 text-2xl hover:text-orange-500 transition-all border-b border-gray-300 pb-6"
+            >
+              Interviews
+            </a>
+            <a
+              href="/artikelen"
+              className="block text-gray-700 text-2xl hover:text-orange-500 transition-all border-b border-gray-300 pb-6"
+            >
+              Artikelen
+            </a>
+            <a
+              href="/evenementen"
+              className="block text-gray-700 text-2xl hover:text-orange-500 transition-all border-b border-gray-300 pb-6"
+            >
+              Evenementen
+            </a>
+            <button className="bg-DarkBlue text-white px-4 py-3 rounded-md mt-4">
+              Word abonee
+            </button>
+          </div>
         </nav>
       )}
     </header>
