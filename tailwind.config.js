@@ -15,8 +15,9 @@ module.exports = {
         '30': '30px',
       },
       fontFamily: {
-        'dm-sans': ['DM Sans', 'sans-serif'],
-        'montserrat': ['Montserrat', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+        dm: ['DM Sans', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
       },
     },
   },

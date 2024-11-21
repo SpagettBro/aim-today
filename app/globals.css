@@ -7,3 +7,12 @@
 
 @layer utilities {
 }
+
+.html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/*Inter & DM Sans & Montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=DM+Sans&family=Montserrat&display=swap");
