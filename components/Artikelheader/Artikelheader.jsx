@@ -4,10 +4,10 @@ import { render } from "storyblok-rich-text-react-renderer";
 const Artikelheader = ({ blok }) => (
   <div {...storyblokEditable(blok)}>
     <div>
-      <div className="font-bold text-orange-600">
+      <div className="font-bold text-orange-600 font-montserrat">
         {render(blok.categorietekst)} 
       </div>
-      <div className="font-bold">
+      <div className="font-bold font-dm-sans" >
         {render(blok.titeltekst)}
       </div>
       <div className="flex font-extralight">
