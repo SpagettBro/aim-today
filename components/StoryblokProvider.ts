@@ -14,6 +14,7 @@ import Home_net_binnen from "./Home/Home_net_binnen";
 import Net_binnen_artikel from "./Net_binnen_artikel/Net_binnen_artikel";
 import Inschrijven_heading from "./Inschrijven_heading/Inschrijven_heading";
 import Inschrijven from "./Inschrijven/Inschrijven";
+import Slideshow from "./Slideshow/Slideshow";
 
 const components = {
   page: Page,
@@ -25,6 +26,7 @@ const components = {
   inschrijven_heading: Inschrijven_heading,
   net_binnen_artikel: Net_binnen_artikel,
   inschrijven: Inschrijven,
+  slideshow: Slideshow,
 };
 
 storyblokInit({

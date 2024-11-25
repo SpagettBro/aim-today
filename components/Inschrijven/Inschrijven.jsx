@@ -3,27 +3,33 @@ import { render } from "storyblok-rich-text-react-renderer";
 
 const Inschrijven = ({ blok }) => (
   <div
-    className="max-w-screen-lg m-5 p-5 bg-white shadow-lg rounded-lg flex flex-col md:flex-row gap-6"
+    className="max-w-screen-lg m-5 mt-6 p-5 bg-white shadow-[0_0_10px_rgba(0,0,0,0.15)] rounded-lg flex flex-col md:flex-row md:gap-12 md:p-10 md:mx-auto"
     {...storyblokEditable(blok)}
   >
-    {/*Event details */}
+    {/* Event details */}
     <div className="flex-1">
       {/* Titel van het event */}
       <div
-        className="text-2xl font-bold text-gray-800 mb-1"
+        className="text-2xl font-bold text-[#2a3a4b] mb-1 md:mb-6"
         {...storyblokEditable(blok.title)}
       >
         {render(blok.title)}
       </div>
 
       {/* Bijschrijving van het event */}
-      <div className="text-gray-600 mb-4" {...storyblokEditable(blok.add)}>
+      <div
+        className="text-[#2a3a4b] mb-4 md:mb-6"
+        {...storyblokEditable(blok.add)}
+      >
         {render(blok.add)}
       </div>
 
       {/* Afbeelding */}
       {blok.image && (
-        <div className="mb-4" {...storyblokEditable(blok.image)}>
+        <div
+          className="mb-4 md:mb-8 rounded-lg shadow-[5px_5px_0_0_#e76f51] overflow-hidden"
+          {...storyblokEditable(blok.image)}
+        >
           <img
             src={blok.image}
             alt={blok.image.alt || "Event afbeelding"}
@@ -33,38 +39,37 @@ const Inschrijven = ({ blok }) => (
       )}
 
       {/* Datum en Tijd */}
-      <div className="mb-4">
+      <div className="mt-8">
         <p className="text-lg font-semibold text-gray-700">Datum en tijd</p>
-        <p className="text-gray-600" {...storyblokEditable(blok.date)}>
+        <p className="text-[#2a3a4b]" {...storyblokEditable(blok.date)}>
           {render(blok.date)}
         </p>
-        <p className="text-gray-600" {...storyblokEditable(blok.time)}>
+        <p className="text-[#2a3a4b]" {...storyblokEditable(blok.time)}>
           {render(blok.time)}
         </p>
       </div>
 
       {/* Over dit evenement */}
-      <div className="mb-4">
+      <div className="mt-8 mb-8">
         <p className="text-lg font-semibold text-gray-700">
           Over dit evenement
         </p>
-        <p className="text-gray-600" {...storyblokEditable(blok.about)}>
+        <p className="text-[#2a3a4b]" {...storyblokEditable(blok.about)}>
           {render(blok.about)}
         </p>
       </div>
 
       {/* Tags */}
       {blok.tags && blok.tags.length > 0 ? (
-        <div className="mb-4" {...storyblokEditable(blok.tags)}>
+        <div className="" {...storyblokEditable(blok.tags)}>
           <p className="text-lg font-semibold text-gray-700">Tags</p>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 md:gap-4">
             {blok.tags.map((tag, index) => (
               <span
                 key={index}
-                className="px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full"
+                className="px-3 py-1 md:px-4 md:py-2 bg-gray-200 text-gray-700 text-sm rounded-full"
               >
-                {tag.name || tag}{" "}
-                {/* Gebruik 'name' als tags objecten bevatten */}
+                {tag.name || tag}
               </span>
             ))}
           </div>
@@ -72,18 +77,18 @@ const Inschrijven = ({ blok }) => (
       ) : (
         <div className="mb-4">
           <p className="text-lg font-semibold text-gray-700">Tags</p>
-          <p className="text-gray-600">Geen tags beschikbaar.</p>
+          <p className="text-[#2a3a4b]">Geen tags beschikbaar.</p>
         </div>
       )}
     </div>
 
     {/* Inschrijf formulier */}
     <div
-      className="flex-1 bg-gray-100 p-6 h-fit rounded-lg shadow-inner"
+      className="flex-1 bg-[#EBEEF3] p-6 md:p-10 h-max mt-6 rounded-lg shadow-inner"
       {...storyblokEditable(blok.form)}
     >
       <p className="text-lg font-semibold text-gray-700 mb-4">Schrijf je in</p>
-      <form className="space-y-4">
+      <form className="space-y-6">
         <input
           type="text"
           name="first_name"
@@ -102,22 +107,27 @@ const Inschrijven = ({ blok }) => (
           placeholder="Email *"
           className="w-full p-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-500"
         />
-        <div className="flex items-center">
-          <input type="checkbox" name="terms" id="terms" className="mr-2" />
-          <label htmlFor="terms" className="text-sm text-gray-600">
+        <div className="mt-4 flex items-center gap-3">
+          <input
+            type="checkbox"
+            name="terms"
+            id="terms"
+            className="w-5 h-5 border border-gray-300 rounded focus:ring focus:ring-blue-500"
+          />
+          <label htmlFor="terms" className="text-sm text-[#2a3a4b]">
             {render(blok.terms_text)}
           </label>
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-2 mt-6">
           <button
             type="submit"
-            className="px-4 py-2 bg-orange-500 text-white font-bold rounded-lg hover:bg-orange-600"
+            className="px-4 py-2 bg-[#E76F51] text-white font-semibold rounded-md hover:bg-[#b75840]"
           >
             {render(blok.submit_text)}
           </button>
           <button
             type="button"
-            className="px-4 py-2 bg-gray-300 text-gray-700 font-bold rounded-lg hover:bg-gray-400"
+            className="px-4 py-2 border-2 border-[#d0d0d0] text-[#2a3a4b] rounded-md hover:bg-gray-400"
           >
             {render(blok.cancel_text)}
           </button>
