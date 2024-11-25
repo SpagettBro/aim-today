@@ -15,6 +15,7 @@ import Footer from "./Footer/Footer";
 import Home_net_binnen from "./Home/Home_net_binnen";
 import Net_binnen_artikel from "./Net_binnen_artikel/Net_binnen_artikel";
 import Inschrijven_heading from "./Inschrijven_heading/Inschrijven_heading";
+import Reacties from "./Reacties/Reacties"; 
 
 const components = {
   page: Page,
@@ -27,6 +28,7 @@ const components = {
   home_net_binnen: Home_net_binnen,
   inschrijven_heading: Inschrijven_heading,
   net_binnen_artikel: Net_binnen_artikel,
+  reacties: Reacties,
   
 };
 
