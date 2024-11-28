@@ -11,9 +11,7 @@ const Artikelheader = ({ blok }) => (
         {render(blok.titeltekst)}
       </div>
       <div className="mt-2 mb-4 text-sm">
-        In een tijdperk van razendsnelle technologische ontwikkelingen verandert ook marketing ingrijpend. 
-        Marketingexpert Lisa van der Meer deelt haar inzichten over trends als AI, personalisatie en datagedreven strategieën. 
-        Deze innovaties bepalen hoe bedrijven inspelen op de steeds veranderende klantbehoeften.
+        {render(blok.inleidingtekst)}
       </div>
       <div className="flex justify-between font-extralight text-xs mb-2">
         {render(blok.auteurtekst)}
