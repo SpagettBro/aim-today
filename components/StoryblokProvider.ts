@@ -14,6 +14,9 @@ import Home_net_binnen from "./Home/Home_net_binnen";
 import Inschrijven_heading from "./Inschrijven_heading/Inschrijven_heading";
 import Blok_container from "./Blok_container/Blok_container";
 import Net_binnen_artikel from "./Net_binnen_artikel/Net_binnen_artikel";
+import Article from "./Article/Article";
+import ArticleTeaser from "./ArticleTeaser/ArticleTeaser";
+import AllArticles from "./AllArticles/AllArticles";
 
 
 const components = {
@@ -26,9 +29,9 @@ const components = {
   inschrijven_heading: Inschrijven_heading,
   blok_container: Blok_container,
   net_binnen_artikel: Net_binnen_artikel,
-
-
-  
+  article: Article,
+  articleteaser: ArticleTeaser,
+  allArticles: AllArticles
 };
 
 storyblokInit({
