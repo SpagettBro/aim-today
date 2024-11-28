@@ -119,25 +119,25 @@ const Navbar = ({ blok }) => {
           <div className="p-6 space-y-4">
             <a
               href="/nieuws"
-              className="block text-gray-700 text-2xl hover:text-orange-500 transition-all border-b border-gray-300 pb-6"
+              className="block text-[#2a3a4b] text-2xl hover:text-orange-500 transition-all border-b border-gray-300 pb-6"
             >
               Nieuws
             </a>
             <a
               href="/interviews"
-              className="block text-gray-700 text-2xl hover:text-orange-500 transition-all border-b border-gray-300 pb-6"
+              className="block text-[#2a3a4b] text-2xl hover:text-orange-500 transition-all border-b border-gray-300 pb-6"
             >
               Interviews
             </a>
             <a
               href="/artikelen"
-              className="block text-gray-700 text-2xl hover:text-orange-500 transition-all border-b border-gray-300 pb-6"
+              className="block text-[#2a3a4b] text-2xl hover:text-orange-500 transition-all border-b border-gray-300 pb-6"
             >
               Artikelen
             </a>
             <a
               href="/evenementen"
-              className="block text-gray-700 text-2xl hover:text-orange-500 transition-all border-b border-gray-300 pb-6"
+              className="block text-[#2a3a4b] text-2xl hover:text-orange-500 transition-all border-b border-gray-300 pb-6"
             >
               Evenementen
             </a>
