@@ -32,6 +32,8 @@ const components = {
   home_net_binnen: Home_net_binnen,
   inschrijven_heading: Inschrijven_heading,
   net_binnen_artikel: Net_binnen_artikel,
+  inschrijven: Inschrijven,
+  slideshow: Slideshow,
   reactiesectie: ReactieSectie,
 };
 
