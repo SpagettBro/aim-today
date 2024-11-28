@@ -17,6 +17,8 @@ import Net_binnen_artikel from "./Net_binnen_artikel/Net_binnen_artikel";
 import Inschrijven_heading from "./Inschrijven_heading/Inschrijven_heading";
 import Inschrijven from "./Inschrijven/Inschrijven";
 import Slideshow from "./Slideshow/Slideshow";
+import ReactieSectie from "./ReactieSectie/ReactieSectie"; 
+import Artikelshare from "./Artikelshare/Artikelshare"; 
 
 const components = {
   page: Page,
@@ -25,12 +27,12 @@ const components = {
   navbar: Navbar,
   artikelheader: Artikelheader,
   artikelinhoud: Artikelinhoud,
+  artikelshare: Artikelshare,
   footer: Footer,
   home_net_binnen: Home_net_binnen,
   inschrijven_heading: Inschrijven_heading,
   net_binnen_artikel: Net_binnen_artikel,
-  inschrijven: Inschrijven,
-  slideshow: Slideshow,
+  reactiesectie: ReactieSectie,
 };
 
 storyblokInit({

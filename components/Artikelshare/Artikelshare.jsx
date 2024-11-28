@@ -1,17 +1,18 @@
 import { storyblokEditable } from "@storyblok/react/rsc";
 import { render } from "storyblok-rich-text-react-renderer";
 
-const Artikelinhoud= ({ blok }) => (
+const Artikelshare= ({ blok }) => (
   <div className="mx-4 my-8 text-sm lg:my-1/4 lg:grid lg:columns-12" {...storyblokEditable(blok)}>
     <div>
-        <div className="mb-4 lg:col-start-2">
-          {render(blok.koptekst)}
-        </div>
-        <div>
-          {render(blok.paragraaftekst)}
+        <div className="w-full flex mb-16">
+          <img 
+              className="h-[50px] absolute right-10"
+              src={blok.sharefoto.filename}
+              alt="share knop"
+            />
         </div>
     </div>
   </div>
 );
 
-export default Artikelinhoud;
+export default Artikelshare;
