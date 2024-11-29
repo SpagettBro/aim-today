@@ -1,10 +1,9 @@
 import { getStoryblokApi } from "@storyblok/react";
-import { render } from "storyblok-rich-text-react-renderer";
-import Article from "@components/Article/Article";
+import Artikel from "@components/Artikel/Artikel";
  
 export async function getData(slug: string) {
   const storyblokApi = getStoryblokApi();
-  const response = await storyblokApi.get(`cdn/stories/blog/${slug}`, {
+  const response = await storyblokApi.get(`cdn/stories/artikelen/${slug}`, {
     version: "draft",
     cv: Date.now(),
   });
@@ -23,9 +22,7 @@ export default async function ArticlePage({
  
   return (
     <div>
-      <Article blok={blok} />
+      <Artikel blok={blok} />
     </div>
   );
 }
- 
- 

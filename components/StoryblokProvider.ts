@@ -20,12 +20,10 @@ import ReactieSectie from "./ReactieSectie/ReactieSectie";
 import Artikelshare from "./Artikelshare/Artikelshare"; 
 import Blok_container from "./Blok_container/Blok_container";
 import Net_binnen_artikel from "./Net_binnen_artikel/Net_binnen_artikel";
-import Article from "./Article/Article";
-import ArticleTeaser from "./ArticleTeaser/ArticleTeaser";
-import AllArticles from "./AllArticles/AllArticles";
-import Testlist from "./Testlist/Testlist";
-import Featurelist from "./Featurelist/Featurelist";
-import PopularArticles from "./PopularArticles/PopularArticles";
+import Artikel from "./Artikel/Artikel";
+import AlleArtikelen from "./AlleArtikelen/AlleArtikelen";
+import PopulaireArtikelen from "./PopulaireArtikelen/PopulaireArtikelen";
+import ArtikelTeaser from "./ArtikelTeaser/ArtikelTeaser";
 
 
 
@@ -45,12 +43,10 @@ const components = {
   inschrijven: Inschrijven,
   slideshow: Slideshow,
   reactiesectie: ReactieSectie,
-  article: Article,
-  articleteaser: ArticleTeaser,
-  allarticles: AllArticles,
-  testlist: Testlist,
-  featurelist: Featurelist,
-  populararticles: PopularArticles,
+  artikel: Artikel,
+  populaireartikelen: PopulaireArtikelen,
+  alleartikelen: AlleArtikelen,
+  artikelteaser: ArtikelTeaser,
 };
 
 storyblokInit({
