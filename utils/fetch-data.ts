@@ -21,6 +21,7 @@ async function fetchData(slug?: string): Promise<FetchDataResult> {
   const sbParams: ISbStoriesParams = {
     version: "draft",
     resolve_links: "url",
+    resolve_relations: ["populararticles.articles"],
     cv: Date.now(), // Use the current timestamp as a cache buster
   };
   try {

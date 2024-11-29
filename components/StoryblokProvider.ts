@@ -23,6 +23,10 @@ import Net_binnen_artikel from "./Net_binnen_artikel/Net_binnen_artikel";
 import Article from "./Article/Article";
 import ArticleTeaser from "./ArticleTeaser/ArticleTeaser";
 import AllArticles from "./AllArticles/AllArticles";
+import Testlist from "./Testlist/Testlist";
+import Featurelist from "./Featurelist/Featurelist";
+import PopularArticles from "./PopularArticles/PopularArticles";
+
 
 
 const components = {
@@ -43,7 +47,10 @@ const components = {
   reactiesectie: ReactieSectie,
   article: Article,
   articleteaser: ArticleTeaser,
-  allArticles: AllArticles
+  allarticles: AllArticles,
+  testlist: Testlist,
+  featurelist: Featurelist,
+  populararticles: PopularArticles,
 };
 
 storyblokInit({

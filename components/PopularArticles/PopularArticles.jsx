@@ -1,7 +1,7 @@
-import ArticleTeaser from "./ArticleTeaser";
+import ArticleTeaser from "../ArticleTeaser/ArticleTeaser";
 import { storyblokEditable } from "@storyblok/react";
  
-const PopularArtices = ({ blok }) => {
+const PopularArticles = ({ blok }) => { // Correct de naam hier
   return (
     <>
       <h2 className="text-3xl">{blok.headline}</h2>
@@ -10,6 +10,7 @@ const PopularArtices = ({ blok }) => {
         {...storyblokEditable(blok)}
       >
         {blok.articles.map((article) => {
+          console.log(article)
           article.content.slug = article.slug
           return (
             <ArticleTeaser article={article.content} key={article.uuid} />
@@ -19,4 +20,4 @@ const PopularArtices = ({ blok }) => {
     </>
   );
 };
-export default PopularArtices;
+export default PopularArticles; // Correct de export hier
