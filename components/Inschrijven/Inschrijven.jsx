@@ -10,7 +10,7 @@ const Inschrijven = ({ blok }) => (
     <div className="flex-1">
       {/* Titel van het event */}
       <div
-        className="text-2xl font-bold text-[#2a3a4b] mb-1"
+        className="text-2xl font-bold font-dm-sans text-[#2a3a4b] mb-1"
         {...storyblokEditable(blok.title)}
       >
         {render(blok.title)}
@@ -40,7 +40,9 @@ const Inschrijven = ({ blok }) => (
 
       {/* Datum en Tijd */}
       <div className="mt-8">
-        <p className="text-lg font-bold text-[#2a3a4b]">Datum en tijd</p>
+        <p className="text-lg font-bold font-dm-sans text-[#2a3a4b]">
+          Datum en tijd
+        </p>
         <p className="text-[#2a3a4b]" {...storyblokEditable(blok.date)}>
           {render(blok.date)}
         </p>
@@ -51,7 +53,9 @@ const Inschrijven = ({ blok }) => (
 
       {/* Over dit evenement */}
       <div className="mt-8 mb-8">
-        <p className="text-lg font-bold text-[#2a3a4b]">Over dit evenement</p>
+        <p className="text-lg font-bold font-dm-sans text-[#2a3a4b]">
+          Over dit evenement
+        </p>
         <p className="text-[#2a3a4b]" {...storyblokEditable(blok.about)}>
           {render(blok.about)}
         </p>
@@ -60,12 +64,14 @@ const Inschrijven = ({ blok }) => (
       {/* Tags */}
       {blok.tags && blok.tags.length > 0 ? (
         <div className="" {...storyblokEditable(blok.tags)}>
-          <p className="text-lg mb-2 font-bold text-[#2a3a4b]">Tags</p>
+          <p className="text-lg mb-2 font-dm-sans font-bold text-[#2a3a4b]">
+            Tags
+          </p>
           <div className="flex flex-wrap gap-2 md:gap-4">
             {blok.tags.map((tag, index) => (
               <span
                 key={index}
-                className="px-2 py-[0.1rem] md:px-4 md:py-2 bg-gray-200 text-[#2a3a4b] text-sm rounded-full"
+                className="px-2 py-[0.1rem] md:px-4 md:py-2  border border-[#e76f51] bg-[#ffd8ce] text-[#e76f51] text-sm font-montserrat rounded-full"
               >
                 {tag.name || tag}
               </span>
@@ -85,7 +91,9 @@ const Inschrijven = ({ blok }) => (
       className="flex-1 bg-[#EBEEF3] p-6 md:p-10 h-max mt-6 rounded-lg shadow-inner"
       {...storyblokEditable(blok.form)}
     >
-      <p className="text-lg font-semibold text-[#2a3a4b] mb-4">Schrijf je in</p>
+      <p className="text-lg font-bold font-dm-sans text-[#2a3a4b] mb-4">
+        Schrijf je in
+      </p>
       <form className="space-y-6">
         <input
           type="text"
