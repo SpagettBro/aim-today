@@ -25,6 +25,8 @@ import ArticleTeaser from "./ArticleTeaser/ArticleTeaser";
 import AllArticles from "./AllArticles/AllArticles";
 import EventsOverzicht from "./EventsOverzicht/EventsOverzicht";
 
+import Tags from "./Tags/Tags"
+import Artikelfoot from "./Artikelfoot/Artikelfoot"
 
 const components = {
   page: Page,
@@ -46,6 +48,8 @@ const components = {
   articleteaser: ArticleTeaser,
   allArticles: AllArticles,
   eventsoverzicht: EventsOverzicht,
+  tags: Tags,
+  artikelfoot: Artikelfoot,
 };
 
 storyblokInit({
