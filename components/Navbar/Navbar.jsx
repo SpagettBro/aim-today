@@ -57,7 +57,7 @@ const Navbar = ({ blok }) => {
               <span className="block w-full h-[2px] bg-orange-500 opacity-0 group-hover:opacity-100 transition-all"></span>
             </a>
             <a
-              href="/evenementen"
+              href="/events"
               className="text-gray-500 group hover:text-black transition duration-300 px-[10px]"
             >
               Evenementen

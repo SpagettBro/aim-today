@@ -64,7 +64,7 @@ const EventsOverzicht = ({ blok }) => (
                 )}
 
                 {/* Datum */}
-                <p className="flex items-center text-[#2a3a4b] font-medium font-montserrat">
+                <p className="flex items-center text-[#2a3a4b] font-semibold font-montserrat">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5 mr-2 text-[#2a3a4b]"
