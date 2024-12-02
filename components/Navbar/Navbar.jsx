@@ -37,28 +37,28 @@ const Navbar = ({ blok }) => {
           <nav className="hidden lg:flex space-x-6">
             <a
               href="/nieuws"
-              className="text-gray-500 group hover:text-black transition duration-300 px-[10px]"
+              className="text-[#2A3A4B] group hover:text-black transition duration-300 px-[10px]"
             >
               Nieuws
               <span className="block w-full h-[2px] bg-orange-500 opacity-0 group-hover:opacity-100 transition-all"></span>
             </a>
             <a
               href="/interviews"
-              className="text-gray-500 group hover:text-black transition duration-300 px-[10px]"
+              className="text-[#2A3A4B] group hover:text-black transition duration-300 px-[10px]"
             >
               Interviews
               <span className="block w-full h-[2px] bg-orange-500 opacity-0 group-hover:opacity-100 transition-all"></span>
             </a>
             <a
               href="/artikelen"
-              className="text-gray-500 group hover:text-black transition duration-300 px-[10px]"
+              className="text-[#2A3A4B] group hover:text-black transition duration-300 px-[10px]"
             >
               Artikelen
               <span className="block w-full h-[2px] bg-orange-500 opacity-0 group-hover:opacity-100 transition-all"></span>
             </a>
             <a
               href="/events"
-              className="text-gray-500 group hover:text-black transition duration-300 px-[10px]"
+              className="text-[#2A3A4B] group hover:text-black transition duration-300 px-[10px]"
             >
               Evenementen
               <span className="block w-full h-[2px] bg-orange-500 opacity-0 group-hover:opacity-100 transition-all"></span>
@@ -66,7 +66,7 @@ const Navbar = ({ blok }) => {
           </nav>
 
           <div className="hidden lg:flex items-center space-x-4 ml-[225px]">
-            <button className="text-gray-500 hover:text-black transition duration-300">
+            <button className="text-[#2A3A4B] hover:text-black transition duration-300">
               Log In
             </button>
             <button className="text-white bg-donkerBlauw px-[15px] py-[10px] rounded-md">
@@ -76,7 +76,7 @@ const Navbar = ({ blok }) => {
         </div>
 
         <button
-          className="lg:hidden p-2 text-gray-500 focus:outline-none"
+          className="lg:hidden p-2 text-[#2A3A4B] focus:outline-none"
           onClick={toggleMenu}
         >
           <span
@@ -108,7 +108,7 @@ const Navbar = ({ blok }) => {
             />
             <button
               onClick={toggleMenu}
-              className="text-gray-500 hover:text-black transition duration-300 focus:outline-none"
+              className="text-[#2A3A4B] hover:text-black transition duration-300 focus:outline-none"
             >
               <span className="block w-6 h-0.5 bg-gray-500 mb-1 transform rotate-45"></span>
               <span className="block w-6 h-0.5 bg-gray-500 transform -rotate-45"></span>
