@@ -3,7 +3,7 @@ import { render } from "storyblok-rich-text-react-renderer";
 
 const ReactieSectie = ({ blok }) => (
   <div {...storyblokEditable(blok)}>
-    <div className="flex justify-between align-text-middle mx-2">
+    <div className="flex lg:w-1/2 lg:mx-auto  justify-between align-text-middle mx-2">
         <div className="text-base font-bold py-2">
             {render(blok.reactieKop)} 
         </div>

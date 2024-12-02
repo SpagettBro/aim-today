@@ -19,6 +19,8 @@ import Inschrijven from "./Inschrijven/Inschrijven";
 import Slideshow from "./Slideshow/Slideshow";
 import ReactieSectie from "./ReactieSectie/ReactieSectie"; 
 import Artikelshare from "./Artikelshare/Artikelshare"; 
+import Tags from "./Tags/Tags"
+import Artikelfoot from "./Artikelfoot/Artikelfoot"
 
 const components = {
   page: Page,
@@ -35,6 +37,8 @@ const components = {
   inschrijven: Inschrijven,
   slideshow: Slideshow,
   reactiesectie: ReactieSectie,
+  tags: Tags,
+  artikelfoot: Artikelfoot,
 };
 
 storyblokInit({
