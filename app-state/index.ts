@@ -4,7 +4,3 @@ import { useAppState } from './hooks/use-app-state.hook';
 
 export { AppStateContext, AppStateProvider, useAppState };
 
-let sbParams = {
-    version: "draft", // or 'published',
-    resolve_relations: ["popular-articles.articles"],
-  };

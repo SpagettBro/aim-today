@@ -21,9 +21,10 @@ import Artikelshare from "./Artikelshare/Artikelshare";
 import Blok_container from "./Blok_container/Blok_container";
 import Net_binnen_artikel from "./Net_binnen_artikel/Net_binnen_artikel";
 import Artikel from "./Artikel/Artikel";
-import AlleArtikelen from "./AlleArtikelen/AlleArtikelen";
 import PopulaireArtikelen from "./PopulaireArtikelen/PopulaireArtikelen";
 import ArtikelTeaser from "./ArtikelTeaser/ArtikelTeaser";
+import ArtikelContainer from "./ArtikelContainer/ArtikelContainer";
+
 
 
 
@@ -45,8 +46,8 @@ const components = {
   reactiesectie: ReactieSectie,
   artikel: Artikel,
   populaireartikelen: PopulaireArtikelen,
-  alleartikelen: AlleArtikelen,
   artikelteaser: ArtikelTeaser,
+  artikelcontainer: ArtikelContainer,
 };
 
 storyblokInit({

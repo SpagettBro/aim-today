@@ -3,25 +3,24 @@ import {
   ISbStoriesParams,
   ISbResult,
 } from "@storyblok/react/rsc";
-
+ 
 interface FetchDataResponse {
   story: any; // Replace 'any' with the actual type of your story
 }
-
+ 
 interface FetchDataResult {
   data: FetchDataResponse;
   status: number;
 }
-
+ 
 console.log("dit is de fetch data bestand");
-
+ 
 async function fetchData(slug?: string): Promise<FetchDataResult> {
-  console.log(`HEEUUUUH ${slug}`);
+  console.log(`${slug}`);
   const storyblokApi = getStoryblokApi();
   const sbParams: ISbStoriesParams = {
     version: "draft",
     resolve_links: "url",
-    resolve_relations: ["populararticles.articles"],
     cv: Date.now(), // Use the current timestamp as a cache buster
   };
   try {
@@ -33,7 +32,7 @@ async function fetchData(slug?: string): Promise<FetchDataResult> {
       }
     );
     console.log(sbParams);
-
+ 
     // Handle case where there is no story
     return {
       data: response.data,
@@ -49,5 +48,5 @@ async function fetchData(slug?: string): Promise<FetchDataResult> {
     };
   }
 }
-
+ 
 export default fetchData;
