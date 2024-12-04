@@ -37,28 +37,28 @@ const Navbar = ({ blok }) => {
           <nav className="hidden lg:flex space-x-6">
             <a
               href="/nieuws"
-              className="text-[#2A3A4B] group hover:text-black transition duration-300 px-[10px]"
+              className="text-[#2A3A4B] group hover:text-black transition duration-300 px-[10px] font-dm"
             >
               Nieuws
               <span className="block w-full h-[2px] bg-orange-500 opacity-0 group-hover:opacity-100 transition-all"></span>
             </a>
             <a
               href="/interviews"
-              className="text-[#2A3A4B] group hover:text-black transition duration-300 px-[10px]"
+              className="text-[#2A3A4B] group hover:text-black transition duration-300 px-[10px] font-dm"
             >
               Interviews
               <span className="block w-full h-[2px] bg-orange-500 opacity-0 group-hover:opacity-100 transition-all"></span>
             </a>
             <a
               href="/artikelen"
-              className="text-[#2A3A4B] group hover:text-black transition duration-300 px-[10px]"
+              className="text-[#2A3A4B] group hover:text-black transition duration-300 px-[10px] font-dm"
             >
               Artikelen
               <span className="block w-full h-[2px] bg-orange-500 opacity-0 group-hover:opacity-100 transition-all"></span>
             </a>
             <a
               href="/events"
-              className="text-[#2A3A4B] group hover:text-black transition duration-300 px-[10px]"
+              className="text-[#2A3A4B] group hover:text-black transition duration-300 px-[10px] font-dm"
             >
               Evenementen
               <span className="block w-full h-[2px] bg-orange-500 opacity-0 group-hover:opacity-100 transition-all"></span>
@@ -66,10 +66,10 @@ const Navbar = ({ blok }) => {
           </nav>
 
           <div className="hidden lg:flex items-center space-x-4 ml-[225px]">
-            <button className="text-[#2A3A4B] hover:text-black transition duration-300">
+            <button className="text-[#2A3A4B] hover:text-black transition duration-300 font-dm">
               Log In
             </button>
-            <button className="text-white bg-donkerBlauw px-[15px] py-[10px] rounded-md">
+            <button className="text-white bg-donkerBlauw px-[15px] py-[10px] rounded-md font-dm">
               Word Abonnee
             </button>
           </div>
