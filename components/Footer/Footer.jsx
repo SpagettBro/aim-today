@@ -1,119 +1,172 @@
-import React from "react";
+import { storyblokEditable } from "@storyblok/react/rsc";
 
-const Footer = ({ blok }) => {
-  return (
-    <footer className="bg-footerKleur text-donkerBlauw relative h-[337px]">
-      <div className="container mx-auto h-full">
-        {/* Logo links onder */}
-        <div className="absolute bottom-4 left-[216px]">
-          {blok.logo && (
-            <img src={blok.logo.filename} alt="Logo" className="h-12" />
-          )}
+const Footer = ({ blok }) => (
+  <div
+    className="bg-gray-100 py-1 px-4 md:py-[20px]"
+    {...storyblokEditable(blok)}
+  >
+    {/* Main Content */}
+    <div className="md:flex md:justify-between md:items-start md:w-full md:max-w-[1200px] md:mx-auto">
+      {/* Links Section */}
+      <div className="md:w-[322px]">
+        {/* Mobile: Stacked Links in Flex Columns */}
+        <ul className="space-y-4 text-center md:hidden flex flex-wrap justify-center">
+          <li className="w-1/2 mt-2">
+            <a href="#" className="hover:text-orange-500">
+              Nieuws
+            </a>
+          </li>
+          <li className="w-1/2">
+            <a href="#" className="hover:text-orange-500">
+              Interviews
+            </a>
+          </li>
+          <li className="w-1/2">
+            <a href="#" className="hover:text-orange-500">
+              Artikels
+            </a>
+          </li>
+          <li className="w-1/2">
+            <a href="#" className="hover:text-orange-500">
+              Evenementen
+            </a>
+          </li>
+          <li className="w-1/2">
+            <a href="#" className="hover:text-orange-500">
+              Webinars
+            </a>
+          </li>
+          <li className="w-1/2">
+            <a href="#" className="hover:text-orange-500">
+              Vacatures
+            </a>
+          </li>
+          <li className="w-1/2">
+            <a href="#" className="hover:text-orange-500">
+              Contact
+            </a>
+          </li>
+          <li className="w-1/2">
+            <a href="#" className="hover:text-orange-500">
+              Team
+            </a>
+          </li>
+          <li className="w-1/2">
+            <a href="#" className="hover:text-orange-500">
+              Over
+            </a>
+          </li>
+          <li className="w-1/2">
+            <a href="#" className="hover:text-orange-500">
+              Nieuwsbrief
+            </a>
+          </li>
+        </ul>
+        {/* Desktop: Two Columns */}
+        <div className="hidden md:grid grid-cols-2 gap-x-8 gap-y-4 text-left">
+          <ul className="space-y-4">
+            <li>
+              <a href="#" className="hover:text-orange-500">
+                Nieuws
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-orange-500">
+                Interviews
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-orange-500">
+                Artikels
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-orange-500">
+                Evenementen
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-orange-500">
+                Webinars
+              </a>
+            </li>
+          </ul>
+          <ul className="space-y-4">
+            <li>
+              <a href="#" className="hover:text-orange-500">
+                Vacatures
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-orange-500">
+                Contact
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-orange-500">
+                Team
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-orange-500">
+                Over
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-orange-500">
+                Nieuwsbrief
+              </a>
+            </li>
+          </ul>
         </div>
-
-        {/* Tabbladen linksboven */}
-        <div className="absolute top-4 left-[216px]">
-          <div className="flex space-x-20">
-            {/* Eerste kolom */}
-            <ul>
-              <li className="text-sm font-semibold py-2.5">{blok.tabblad1}</li>
-              <li className="text-sm font-semibold py-2.5">{blok.tabblad2}</li>
-              <li className="text-sm font-semibold py-2.5">{blok.tabblad3}</li>
-              <li className="text-sm font-semibold py-2.5">{blok.tabblad4}</li>
-              <li className="text-sm font-semibold py-2.5">{blok.tabblad5}</li>
-            </ul>
-            {/* Tweede kolom */}
-            <ul>
-              <li className="text-sm font-semibold py-2.5">{blok.tabblad6}</li>
-              <li className="text-sm font-semibold py-2.5">{blok.tabblad7}</li>
-              <li className="text-sm font-semibold py-2.5">{blok.tabblad8}</li>
-              <li className="text-sm font-semibold py-2.5">{blok.tabblad9}</li>
-              <li className="text-sm font-semibold py-2.5">{blok.tabblad10}</li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Nieuwsbrief */}
-        <div className="absolute top-[64px] right-[223px]">
-          <p className="text-lg font-semibold mb-2">
-            Meld je aan voor de nieuwsbrief
-          </p>
-          <form className="flex h-[50px] w-[436px]">
-            <input
-              type="email"
-              placeholder="email@gmail.com"
-              className="border border-gray-300 rounded-l-md px-4 py-2 text-sm w-full h-full focus:outline-none"
-            />
-            <button
-              type="submit"
-              className="bg-orange-500 text-white flex items-center justify-center w-[50px] h-full rounded-r-md"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-5 h-5"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </button>
-          </form>
-        </div>
-
-        {/* Horizontale lijn */}
-        <div
-          className="absolute left-0 w-full border-t border-gray-300"
-          style={{ top: "calc(337px - 22px - 48px)" }}
-        ></div>
-
-        {/* Socials rechtsonder */}
-        <div className="absolute bottom-4 right-[223px]">
-          <div className="flex space-x-[40px]">
-            {blok.image1 && (
-              <img
-                src={blok.image1.filename}
-                alt="Image 1"
-                className="h-[29px] w-[29px]"
-              />
-            )}
-            {blok.image2 && (
-              <img
-                src={blok.image2.filename}
-                alt="Image 2"
-                className="h-[29px] w-[29px]"
-              />
-            )}
-            {blok.image3 && (
-              <img
-                src={blok.image3.filename}
-                alt="Image 3"
-                className="h-[29px] w-[29px]"
-              />
-            )}
-            {blok.image4 && (
-              <img
-                src={blok.image4.filename}
-                alt="Image 4"
-                className="h-[29px] w-[29px]"
-              />
-            )}
-            {blok.image5 && (
-              <img
-                src={blok.image5.filename}
-                alt="Image 5"
-                className="h-[29px] w-[29px]"
-              />
-            )}
-          </div>
+        {/* Divider */}
+        <div className="h-[1px] bg-gray-300 hidden md:block w-[1200px] mt-[35px]" />
+        {/* Logo */}
+        <div className="mt-6 flex justify-center md:justify-start">
+          <img
+            src={blok.logo.filename}
+            alt="AIM TODAY"
+            className="h-auto max-w-[140px]"
+          />
         </div>
       </div>
-    </footer>
-  );
-};
+
+      {/* Newsletter Section */}
+      <div className="md:w-[430px] w-full flex flex-col items-center md:items-start mt-8 mr-[-700px] md:mt-0">
+        <p className="text-lg font-medium text-gray-700 mb-4 text-center md:text-left">
+          Meld je aan voor de nieuwsbrief
+        </p>
+        <div className="flex w-full mb-6">
+          <input
+            type="email"
+            placeholder="email@gmail.com"
+            className="flex-grow px-4 py-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+          />
+          <button className="px-4 py-2 bg-orange-500 text-white rounded-r-lg hover:bg-orange-600 focus:outline-none">
+            ⟶
+          </button>
+        </div>
+      </div>
+
+      {/* Social Media Icons */}
+      <div className="md:mt-[230px] flex gap-6 justify-center md:justify-end w-full md:w-auto">
+        {[
+          "instagram_icon",
+          "facebook_icon",
+          "youtube_icon",
+          "linkedin_icon",
+          "x_icon",
+        ].map((icon, i) => (
+          <img
+            key={i}
+            src={blok[icon].filename}
+            alt={blok[icon].alt || icon}
+            className="h-8 w-8"
+          />
+        ))}
+      </div>
+    </div>
+  </div>
+);
 
 export default Footer;
