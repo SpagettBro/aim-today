@@ -41,6 +41,7 @@ const components = {
   home_net_binnen: Home_net_binnen,
   inschrijven_heading: Inschrijven_heading,
   blok_container: Blok_container,
+  blok_container: Blok_container,
   net_binnen_artikel: Net_binnen_artikel,
   workshop: Workshop,
   
