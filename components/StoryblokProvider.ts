@@ -13,8 +13,11 @@ import Footer from "./Footer/Footer";
 import Home_net_binnen from "./Home/Home_net_binnen";
 import Inschrijven_heading from "./Inschrijven_heading/Inschrijven_heading";
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import Workshop from "./Workshop/Workshop";
 =======
+=======
+>>>>>>> Stashed changes
 import Inschrijven from "./Inschrijven/Inschrijven";
 import Slideshow from "./Slideshow/Slideshow";
 import ReactieSectie from "./ReactieSectie/ReactieSectie"; 
@@ -24,8 +27,16 @@ import Net_binnen_artikel from "./Net_binnen_artikel/Net_binnen_artikel";
 import Article from "./Article/Article";
 import ArticleTeaser from "./ArticleTeaser/ArticleTeaser";
 import AllArticles from "./AllArticles/AllArticles";
+<<<<<<< Updated upstream
 
 import Workshop from "./Workshop/Workshop"
+=======
+import EventsOverzicht from "./EventsOverzicht/EventsOverzicht";
+import achtergrondblok from "./Workshop/Workshop_blok";
+import Tags from "./Tags/Tags"
+import Artikelfoot from "./Artikelfoot/Artikelfoot"
+import Workshop_blok from "./Workshop/Workshop_blok"
+>>>>>>> Stashed changes
 
 >>>>>>> Stashed changes
 const components = {
@@ -44,6 +55,12 @@ const components = {
   inschrijven_heading: Inschrijven_heading,
   blok_container: Blok_container,
   net_binnen_artikel: Net_binnen_artikel,
+<<<<<<< Updated upstream
+=======
+  Workshop_blok: Workshop_blok,
+  achtergrondblok: achtergrondblok,
+  Workshop_blok: Workshop_blok,
+>>>>>>> Stashed changes
   
 };
 
