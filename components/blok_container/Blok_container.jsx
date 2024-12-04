@@ -1,5 +1,10 @@
 import React from "react";
 import { storyblokEditable } from "@storyblok/react/rsc";
+import Net_binnen_artikel from "../Net_binnen_artikel/Net_binnen_artikel";
+
+
+
+
 
 
 const Blok_container = ({ blok }) => {
@@ -16,13 +21,9 @@ const Blok_container = ({ blok }) => {
               }
               */
             }
-            if (nestedBlok.component === "service_plans") {
-              return <Service_plans blok={nestedBlok} key={nestedBlok._uid} />;
-            } else if (nestedBlok.component === "pricing_services") {
-              return (
-                <Pricing_services blok={nestedBlok} key={nestedBlok._uid} />
-              );
-            }
+            if (nestedBlok.component === "net_binnen_artikel") {
+              return <Net_binnen_artikel blok={nestedBlok} key={nestedBlok._uid} />;
+            } 
             return null;
           })}
       </div>
