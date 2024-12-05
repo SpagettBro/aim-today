@@ -10,6 +10,7 @@ module.exports = {
         oranje: '#e76f51',
         offWhite: '#fbfbf8',
         donkerBlauw: '#264653',
+        footerKleur: '#ebeef3',
         lijngrijs: '#D9D9D9',
       },
       spacing: {
