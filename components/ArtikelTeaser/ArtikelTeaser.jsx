@@ -1,22 +1,26 @@
 import Link from "next/link";
 import { storyblokEditable } from "@storyblok/react/rsc";
 
-const ArtikelTeaser = ({ artikel }) => {
+const ArtikelTeaser = ({ artikel, highlight }) => {
   if (!artikel) {
     console.error("Artikelgegevens ontbreken in ArtikelTeaser");
     return null;
   }
 
-  console.log(artikel);
-
   return (
-    <div className="column feature" {...storyblokEditable(artikel)}>
-      <div className="p-6">
-        <img
-          className="object-cover object-center w-full mb-8 lg:h-48 md:h-36 rounded-xl"
-          src={artikel.afbeelding?.filename || ""}
-          alt={artikel.afbeelding?.alt || "Afbeelding"}
-        />
+    <div className="column feature relative" {...storyblokEditable(artikel)}>
+      {/* Artikel inhoud */}
+      <div className="p-6 bg-white rounded-xl">
+        <div className="relative">
+          {/* Oranje achtergrond voor de afbeelding */}
+          <div className="absolute -bottom-2 -right-2 w-full h-full bg-orange-500 rounded-xl z-0"></div>
+          {/* Afbeelding */}
+          <img
+            className="relative object-cover object-center w-full mb-8 lg:h-48 md:h-36 rounded-xl z-10"
+            src={artikel.afbeelding?.filename || ""}
+            alt={artikel.afbeelding?.alt || "Afbeelding"}
+          />
+        </div>
         <h2 className="mx-auto mb-8 text-xl font-semibold leading-none tracking-tighter text-neutral-600">
           {artikel.titel || "Geen titel"}
         </h2>
