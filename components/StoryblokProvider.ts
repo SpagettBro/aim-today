@@ -14,7 +14,7 @@ import Home_net_binnen from "./Home/Home_net_binnen";
 import Inschrijven_heading from "./Inschrijven_heading/Inschrijven_heading";
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
-import Workshop from "./Workshop/Workshop";
+import Workshop from "./Workshop/Workshop_blok";
 =======
 =======
 >>>>>>> Stashed changes
@@ -29,7 +29,7 @@ import ArticleTeaser from "./ArticleTeaser/ArticleTeaser";
 import AllArticles from "./AllArticles/AllArticles";
 <<<<<<< Updated upstream
 
-import Workshop from "./Workshop/Workshop"
+import Workshop_blok from "./Workshop/Workshop_blok"
 =======
 import EventsOverzicht from "./EventsOverzicht/EventsOverzicht";
 import achtergrondblok from "./Workshop/Workshop_blok";
