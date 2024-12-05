@@ -24,7 +24,6 @@ import Article from "./Article/Article";
 import ArticleTeaser from "./ArticleTeaser/ArticleTeaser";
 import AllArticles from "./AllArticles/AllArticles";
 import EventsOverzicht from "./EventsOverzicht/EventsOverzicht";
-
 import Tags from "./Tags/Tags"
 import Artikelfoot from "./Artikelfoot/Artikelfoot"
 
