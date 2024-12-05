@@ -26,6 +26,7 @@ import AllArticles from "./AllArticles/AllArticles";
 import EventsOverzicht from "./EventsOverzicht/EventsOverzicht";
 import Tags from "./Tags/Tags"
 import Artikelfoot from "./Artikelfoot/Artikelfoot"
+import Artikelsidebar from "./Artikelsidebar/Artikelsidebar"
 
 const components = {
   page: Page,
@@ -49,6 +50,7 @@ const components = {
   eventsoverzicht: EventsOverzicht,
   tags: Tags,
   artikelfoot: Artikelfoot,
+  artikelsidebar: Artikelsidebar,
 };
 
 storyblokInit({
