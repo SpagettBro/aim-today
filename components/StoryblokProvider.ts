@@ -29,7 +29,6 @@ import Tags from "./Tags/Tags"
 import Artikelfoot from "./Artikelfoot/Artikelfoot"
 import EventsOverzicht from "./EventsOverzicht/EventsOverzicht";
 import achtergrondblok from "./Workshop/Workshop_blok";
-import Artikelfooter from "./Artikelfoot/Artikelfoot";
 import Workshop_blok from "./Workshop/Workshop_blok";
 
 
