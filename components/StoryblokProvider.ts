@@ -21,10 +21,13 @@ import ReactieSectie from "./ReactieSectie/ReactieSectie";
 import Artikelshare from "./Artikelshare/Artikelshare"; 
 import Blok_container from "./Blok_container/Blok_container";
 import Net_binnen_artikel from "./Net_binnen_artikel/Net_binnen_artikel";
-import Article from "./Article/Article";
-import ArticleTeaser from "./ArticleTeaser/ArticleTeaser";
-import AllArticles from "./AllArticles/AllArticles";
 import EventsOverzicht from "./EventsOverzicht/EventsOverzicht";
+import Artikel from "./Artikel/Artikel";
+import PopulaireArtikelen from "./PopulaireArtikelen/PopulaireArtikelen";
+import ArtikelTeaser from "./ArtikelTeaser/ArtikelTeaser";
+import ArtikelContainer from "./ArtikelContainer/ArtikelContainer";
+
+
 
 import Tags from "./Tags/Tags"
 import Artikelfoot from "./Artikelfoot/Artikelfoot"
@@ -41,19 +44,19 @@ const components = {
   home_net_binnen: Home_net_binnen,
   inschrijven_heading: Inschrijven_heading,
   blok_container: Blok_container,
-  blok_container: Blok_container,
   net_binnen_artikel: Net_binnen_artikel,
   workshop: Workshop,
   
   inschrijven: Inschrijven,
   slideshow: Slideshow,
   reactiesectie: ReactieSectie,
-  article: Article,
-  articleteaser: ArticleTeaser,
-  allArticles: AllArticles,
   eventsoverzicht: EventsOverzicht,
   tags: Tags,
   artikelfoot: Artikelfoot,
+  artikel: Artikel,
+  populaireartikelen: PopulaireArtikelen,
+  artikelteaser: ArtikelTeaser,
+  artikelcontainer: ArtikelContainer,
 };
 
 storyblokInit({
