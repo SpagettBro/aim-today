@@ -10,7 +10,7 @@ const Footer = ({ blok }) => (
       {/* Links Section */}
       <div className="md:w-[322px]">
         {/* Mobile: Stacked Links in Flex Columns */}
-        <ul className="space-y-4 text-center md:hidden flex flex-wrap justify-center">
+        <ul className="space-y-4 text-center md:hidden flex flex-wrap justify-center font-inter">
           <li className="w-1/2 mt-2">
             <a href="#" className="hover:text-orange-500">
               Nieuws
