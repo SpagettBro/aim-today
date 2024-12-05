@@ -14,9 +14,7 @@ import Artikelinhoud from "./Artikelinhoud/Artikelinhoud";
 import Footer from "./Footer/Footer";
 import Home_net_binnen from "./Home/Home_net_binnen";
 import Inschrijven_heading from "./Inschrijven_heading/Inschrijven_heading";
-<<<<<<< HEAD
 import Markting from "./Marketing/Markting";
-=======
 import Workshop from "./Workshop/Workshop_blok"
 import Inschrijven from "./Inschrijven/Inschrijven";
 import Slideshow from "./Slideshow/Slideshow";
@@ -34,7 +32,6 @@ import EventsOverzicht from "./EventsOverzicht/EventsOverzicht";
 import achtergrondblok from "./Workshop/Workshop_blok";
 import Workshop_blok from "./Workshop/Workshop_blok";
 
->>>>>>> b46844c11825d5a8faac410362ca0b9c491b6859
 
 const components = {
   page: Page,
@@ -50,8 +47,6 @@ const components = {
   inschrijven_heading: Inschrijven_heading,
   blok_container: Blok_container,
   net_binnen_artikel: Net_binnen_artikel,
-<<<<<<< HEAD
-=======
   workshop: Workshop,
   Workshop_blok: Workshop_blok,
   achtergrondblok: achtergrondblok,
@@ -66,7 +61,6 @@ const components = {
   populaireartikelen: PopulaireArtikelen,
   artikelteaser: ArtikelTeaser,
   artikelcontainer: ArtikelContainer,
->>>>>>> b46844c11825d5a8faac410362ca0b9c491b6859
 };
 
 storyblokInit({
