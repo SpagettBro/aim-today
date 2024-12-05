@@ -12,7 +12,7 @@ import Navbar from "./Navbar/Navbar";
 import Artikelheader from "./Artikelheader/Artikelheader";
 import Artikelinhoud from "./Artikelinhoud/Artikelinhoud";
 import Footer from "./Footer/Footer";
-import Home_net_binnen from "./Home/Home_net_binnen";
+import Home_afbeelding from "./Home_afbeelding/Home_afbeelding";
 import Inschrijven_heading from "./Inschrijven_heading/Inschrijven_heading";
 import Markting from "./Marketing/Markting";
 import Workshop from "./Workshop/Workshop_blok"
@@ -43,7 +43,7 @@ const components = {
   artikelshare: Artikelshare,
   footer: Footer,
   markting: Markting,
-  home_net_binnen: Home_net_binnen,
+  home_afbeelding: Home_afbeelding,
   inschrijven_heading: Inschrijven_heading,
   blok_container: Blok_container,
   net_binnen_artikel: Net_binnen_artikel,
