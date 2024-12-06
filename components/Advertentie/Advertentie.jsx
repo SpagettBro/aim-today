@@ -8,7 +8,7 @@ const Advertentie = ({ blok }) => (
     {...storyblokEditable(blok)}
   >
     {/* Linkerzijde */}
-    <div className="links flex h-[600px] w-[25%] bg-blue">
+    <div className="links flex h-[600px] w-[25%] bg-blue w-[310px] h-[405px] flex-shrink-0">
       {blok.advertentie_image?.filename ? (
         <img
           className="object-cover"
