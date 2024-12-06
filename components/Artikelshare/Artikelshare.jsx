@@ -3,13 +3,13 @@ import { render } from "storyblok-rich-text-react-renderer";
 
 const Artikelshare = ({ blok }) => (
   <div
-    className="mx-4 my-8 text-sm lg:w-1/2 lg:mx-auto  lg:my-1/4 lg:grid lg:columns-12"
+    className="mx-4 my-8 text-sm lg:w-1/2 lg:mx-auto lg:my-1/4 lg:grid lg:columns-12 dark:bg-darkGrijs dark:text-[#EAEAEA]"
     {...storyblokEditable(blok)}
   >
     <div>
       <div className="w-full flex justify-end">
         <img
-          className="h-[50px]"
+          className="h-[50px] dark:filter dark:invert"
           src={blok.sharefoto.filename}
           alt="share knop"
         />
@@ -19,3 +19,4 @@ const Artikelshare = ({ blok }) => (
 );
 
 export default Artikelshare;
+
