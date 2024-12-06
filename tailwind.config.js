@@ -12,6 +12,13 @@ module.exports = {
         donkerBlauw: '#264653',
         footerKleur: '#ebeef3',
         lijngrijs: '#D9D9D9',
+
+        darkGrijs: "#282828",
+        donkerOranje: "#E76F5",
+        donkerOffWhite: "#FFFFFF",
+        donkerBlauw: "#264653",
+        footerDark: "#232323",
+        lijnDonker: "#D9D9D9",
       },
       spacing: {
         '30': '30px',
