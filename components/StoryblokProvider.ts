@@ -33,6 +33,8 @@ import achtergrondblok from "./Workshop/Workshop_blok";
 import Workshop_blok from "./Workshop/Workshop_blok";
 import Home_header from "./Home_header/Home_header";
 import Artikelsidebar from "./Artikelsidebar/Artikelsidebar"
+import Paragrafen_ad from "./Paragrafen_ad/Paragrafen_ad";
+
 
 const components = {
   page: Page,
@@ -51,7 +53,6 @@ const components = {
   workshop: Workshop,
   Workshop_blok: Workshop_blok,
   achtergrondblok: achtergrondblok,
-
   inschrijven: Inschrijven,
   slideshow: Slideshow,
   reactiesectie: ReactieSectie,
@@ -64,6 +65,8 @@ const components = {
   artikelcontainer: ArtikelContainer,
   home_header: Home_header,
   artikelsidebar: Artikelsidebar,
+  paragrafen_ad: Paragrafen_ad
+  
 };
 
 storyblokInit({

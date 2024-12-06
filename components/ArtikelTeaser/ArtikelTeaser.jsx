@@ -1,41 +1,48 @@
 import Link from "next/link";
 import { storyblokEditable } from "@storyblok/react/rsc";
 
-const ArtikelTeaser = ({ artikel, highlight }) => {
+const ArtikelTeaser = ({ artikel }) => {
   if (!artikel) {
     console.error("Artikelgegevens ontbreken in ArtikelTeaser");
     return null;
   }
 
   return (
-    <div className="column feature relative" {...storyblokEditable(artikel)}>
-      {/* Artikel inhoud */}
-      <div className="p-6 bg-white rounded-xl">
-        <div className="relative">
-          {/* Oranje achtergrond voor de afbeelding */}
+    <div
+      className="flex flex-col justify-between bg-white p-6"
+      {...storyblokEditable(artikel)}
+    >
+      {/* Afbeelding */}
+      <div>
+        <div className="relative mb-8">
           <div className="absolute -bottom-2 -right-2 w-full h-full bg-oranje rounded-xl z-0"></div>
-          {/* Afbeelding */}
           <img
-            className="relative object-cover object-center w-full mb-8 lg:h-48 md:h-36 rounded-xl z-10"
+            className="relative object-cover object-center w-full h-48 rounded-xl z-10"
             src={artikel.afbeelding?.filename || ""}
             alt={artikel.afbeelding?.alt || "Afbeelding"}
           />
         </div>
-        <h2 className="mx-auto mb-8 text-xl font-semibold leading-none tracking-tighter text-neutral-600">
+
+        {/* Titel */}
+        <h2 className="text-lg font-semibold font-dm leading-none text-donkerBlauw mb-4">
           {artikel.titel || "Geen titel"}
         </h2>
-        <div className="mx-auto text-base leading-relaxed text-gray-500 line-clamp-2">
+
+        {/* Subtitel */}
+        <p className="text-sm leading-relaxed text-gray-500 mb-4 font-inter">
           {artikel.subtitel || "Geen teaser beschikbaar"}
-        </div>
-        <div className="mt-4">
-          <Link
-            href={`/${artikel.slug}`}
-            className="inline-flex items-center mt-4 font-semibold text-oranje lg:mb-0 hover:text-donkerBlauw"
-            title="Lees meer"
-          >
-            Lees meer »
-          </Link>
-        </div>
+        </p>
+      </div>
+
+      {/* Lees meer link */}
+      <div className="mt-auto">
+        <Link
+          href={`/${artikel.slug}`}
+          className="inline-block mt-4 font-semibold font-montserrat text-oranje hover:text-donkerBlauw"
+          title="Lees meer"
+        >
+          Lees meer »
+        </Link>
       </div>
     </div>
   );
