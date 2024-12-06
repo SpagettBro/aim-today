@@ -19,6 +19,11 @@
   padding: 0;
 }
 
+html.dark {
+  background-color: #282828;
+  color: #f8f9fa;
+}
+
 /*Inter & DM Sans & Montserrat */
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=DM+Sans&family=Montserrat&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');

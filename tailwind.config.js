@@ -1,5 +1,6 @@
 module.exports = {
   content: ["./pages/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}", "./app/**/*.{js,ts,jsx,tsx,mdx}"],
+  darkMode: 'media',
   corePlugins: {
     aspectRatio: false,
   },
@@ -14,7 +15,7 @@ module.exports = {
         lijngrijs: '#D9D9D9',
 
         darkGrijs: "#282828",
-        donkerOranje: "#E76F5",
+        donkerOranje: "#E76F51",
         donkerOffWhite: "#FFFFFF",
         donkerBlauw: "#264653",
         footerDark: "#232323",
