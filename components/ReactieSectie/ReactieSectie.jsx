@@ -2,7 +2,7 @@ import { storyblokEditable } from "@storyblok/react/rsc";
 import { render } from "storyblok-rich-text-react-renderer";
 
 const ReactieSectie = ({ blok }) => (
-  <div className=" lg:w-1/2 lg:mx-auto align-text-middle mx-2 mb-10 dark:bg-darkGrijs" {...storyblokEditable(blok)}>
+  <div className=" lg:w-1/2 lg:mx-auto align-text-middle mx-2 mb-10 " {...storyblokEditable(blok)}>
     <div className="flex justify-between mb-5">
       <div className="text-base font-bold py-2">{render(blok.reactieKop)}</div>
       <div className=" bg-orange-500 text-white text-sm font-bold py-2 px-4 rounded">
