@@ -31,7 +31,7 @@ import Artikelfoot from "./Artikelfoot/Artikelfoot"
 import EventsOverzicht from "./EventsOverzicht/EventsOverzicht";
 import achtergrondblok from "./Workshop/Workshop_blok";
 import Workshop_blok from "./Workshop/Workshop_blok";
-
+import Artikelsidebar from "./Artikelsidebar/Artikelsidebar"
 
 const components = {
   page: Page,
@@ -61,6 +61,7 @@ const components = {
   populaireartikelen: PopulaireArtikelen,
   artikelteaser: ArtikelTeaser,
   artikelcontainer: ArtikelContainer,
+  artikelsidebar: Artikelsidebar,
 };
 
 storyblokInit({
