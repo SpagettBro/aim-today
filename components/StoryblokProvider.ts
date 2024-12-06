@@ -31,6 +31,7 @@ import Artikelfoot from "./Artikelfoot/Artikelfoot"
 import EventsOverzicht from "./EventsOverzicht/EventsOverzicht";
 import achtergrondblok from "./Workshop/Workshop_blok";
 import Workshop_blok from "./Workshop/Workshop_blok";
+import Paragrafen_ad from "./Paragrafen_ad/Paragrafen_ad";
 
 
 const components = {
@@ -50,7 +51,6 @@ const components = {
   workshop: Workshop,
   Workshop_blok: Workshop_blok,
   achtergrondblok: achtergrondblok,
-
   inschrijven: Inschrijven,
   slideshow: Slideshow,
   reactiesectie: ReactieSectie,
@@ -61,6 +61,8 @@ const components = {
   populaireartikelen: PopulaireArtikelen,
   artikelteaser: ArtikelTeaser,
   artikelcontainer: ArtikelContainer,
+  paragrafen_ad: Paragrafen_ad
+  
 };
 
 storyblokInit({
