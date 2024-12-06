@@ -37,11 +37,16 @@ const PopulaireArtikelen = ({ blok }) => {
     fetchArtikelen();
   }, [blok.artikelen]);
 
+  // Dynamische klasse voor de tekstkleur op basis van blok.check
+  const headlineTextColorClass = blok.check ? "text-oranje" : "text-donkerBlauw";
+
   return (
     <section className="p-4 lg:p-12" {...storyblokEditable(blok)}>
       <div className="w-full max-w-6xl mx-auto">
         {/* Render de headline */}
-        <p className="text-h2-desktop font-bold mb-2 ml-6 font-dm text-xl text-donkerBlauw">
+        <p
+          className={`text-h2-desktop font-bold mb-2 ml-6 font-dm text-xl ${headlineTextColorClass}`}
+        >
           {blok.headline || "Populaire Artikelen"}
         </p>
 
