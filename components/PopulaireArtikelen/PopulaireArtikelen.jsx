@@ -41,7 +41,7 @@ const PopulaireArtikelen = ({ blok }) => {
     <section className="p-4 lg:p-12" {...storyblokEditable(blok)}>
       <div className="w-full max-w-6xl mx-auto">
         {/* Render de headline */}
-        <p className="text-h2-desktop font-bold mb-6 text-center">
+        <p className="text-h2-desktop font-bold mb-2 ml-6 font-dm text-xl text-donkerBlauw">
           {blok.headline || "Populaire Artikelen"}
         </p>
 
