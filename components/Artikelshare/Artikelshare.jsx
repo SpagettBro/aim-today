@@ -9,7 +9,7 @@ const Artikelshare = ({ blok }) => (
     <div>
       <div className="w-full flex justify-end">
         <img
-          className="h-[50px]"
+          className="h-7"
           src={blok.sharefoto.filename}
           alt="share knop"
         />
