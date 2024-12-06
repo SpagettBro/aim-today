@@ -32,7 +32,8 @@ import EventsOverzicht from "./EventsOverzicht/EventsOverzicht";
 import achtergrondblok from "./Workshop/Workshop_blok";
 import Workshop_blok from "./Workshop/Workshop_blok";
 import Home_header from "./Home_header/Home_header";
-import Artikelsidebar from "./Artikelsidebar/Artikelsidebar"
+import Artikelsidebar from "./Artikelsidebar/Artikelsidebar";
+import Advertentie from "./Advertentie/Advertentie";
 
 const components = {
   page: Page,
@@ -64,6 +65,7 @@ const components = {
   artikelcontainer: ArtikelContainer,
   home_header: Home_header,
   artikelsidebar: Artikelsidebar,
+  advertentie: Advertentie,  
 };
 
 storyblokInit({
