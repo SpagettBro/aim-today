@@ -11,26 +11,36 @@ const Navbar = ({ blok }) => {
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
+    // Dark mode toevoegen of verwijderen van de <html> tag
+    if (!darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
   };
 
   useEffect(() => {
-    if (menuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
+    // Bij eerste render: Dark mode instellen op basis van opgeslagen voorkeur of systeemvoorkeur
+    const userPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const savedDarkMode = localStorage.getItem("darkMode") === "true";
+
+    if (savedDarkMode || (!savedDarkMode && userPrefersDark)) {
+      setDarkMode(true);
+      document.documentElement.classList.add("dark");
     }
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [menuOpen]);
+  }, []);
+
+  useEffect(() => {
+    // Opslaan van dark mode-voorkeur
+    localStorage.setItem("darkMode", darkMode);
+  }, [darkMode]);
 
   return (
     <header
-      className={`w-full border-b z-10 px-6 ${
-        darkMode
-          ? "bg-gray-800 border-gray-600 text-white"
-          : "bg-white border-gray-300 text-black"
-      }`}
+      className={`w-full border-b z-10 px-6 ${darkMode
+        ? "bg-gray-800 border-gray-600 text-white"
+        : "bg-white border-gray-300 text-black"
+        }`}
       {...storyblokEditable(blok)}
     >
       <div className="flex items-center justify-between max-w-7xl mx-auto py-3">
@@ -95,9 +105,8 @@ const Navbar = ({ blok }) => {
 
       {menuOpen && (
         <nav
-          className={`fixed inset-0 ${
-            darkMode ? "bg-gray-800 text-white" : "bg-gray-100 text-black"
-          } shadow-md z-50 overflow-y-auto`}
+          className={`fixed inset-0 ${darkMode ? "bg-gray-800 text-white" : "bg-gray-100 text-black"
+            } shadow-md z-50 overflow-y-auto`}
         >
           {/* Menu implementatie */}
         </nav>

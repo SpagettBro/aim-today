@@ -1,5 +1,7 @@
 module.exports = {
   content: ["./pages/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}", "./app/**/*.{js,ts,jsx,tsx,mdx}"],
+  darkMode: "media",
+  // darkMode: 'class',
   corePlugins: {
     aspectRatio: false,
   },
@@ -12,6 +14,13 @@ module.exports = {
         donkerBlauw: '#264653',
         footerKleur: '#ebeef3',
         lijngrijs: '#D9D9D9',
+
+        darkGrijs: "#282828",
+        donkerOranje: "#d64d36",
+        donkerOffWhite: "#1e1e1c",
+        donkerBlauw: "#1b2b35",
+        footerDark: "#232323",
+        lijnDonker: "#3f3f3f",
       },
       spacing: {
         '30': '30px',

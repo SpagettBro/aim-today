@@ -12,9 +12,8 @@ import Navbar from "./Navbar/Navbar";
 import Artikelheader from "./Artikelheader/Artikelheader";
 import Artikelinhoud from "./Artikelinhoud/Artikelinhoud";
 import Footer from "./Footer/Footer";
-import Home_afbeelding from "./Home_afbeelding/Home_afbeelding";
+// import Home_net_binnen from "./Home/Home_net_binnen";
 import Inschrijven_heading from "./Inschrijven_heading/Inschrijven_heading";
-import Markting from "./Marketing/Markting";
 import Workshop from "./Workshop/Workshop_blok"
 import Inschrijven from "./Inschrijven/Inschrijven";
 import Slideshow from "./Slideshow/Slideshow";
@@ -31,6 +30,7 @@ import Artikelfoot from "./Artikelfoot/Artikelfoot"
 import EventsOverzicht from "./EventsOverzicht/EventsOverzicht";
 import achtergrondblok from "./Workshop/Workshop_blok";
 import Workshop_blok from "./Workshop/Workshop_blok";
+import Markting from "./Marketing/Markting";
 
 
 const components = {
@@ -43,14 +43,13 @@ const components = {
   artikelshare: Artikelshare,
   footer: Footer,
   markting: Markting,
-  home_afbeelding: Home_afbeelding,
+  // home_net_binnen: Home_net_binnen,
   inschrijven_heading: Inschrijven_heading,
   blok_container: Blok_container,
   net_binnen_artikel: Net_binnen_artikel,
   workshop: Workshop,
   Workshop_blok: Workshop_blok,
   achtergrondblok: achtergrondblok,
-
   inschrijven: Inschrijven,
   slideshow: Slideshow,
   reactiesectie: ReactieSectie,
