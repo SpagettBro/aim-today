@@ -1,27 +1,25 @@
 import { useState, useEffect } from "react";
 import { getStoryblokApi, storyblokEditable } from "@storyblok/react";
 import ArtikelTeaser from "../ArtikelTeaser/ArtikelTeaser";
- 
+
 const PopulaireArtikelen = ({ blok }) => {
   const [artikelen, setArtikelen] = useState([]);
-  const [loading, setLoading] = useState(true);
- 
+
   useEffect(() => {
     const fetchArtikelen = async () => {
       if (!blok.artikelen || blok.artikelen.length === 0) {
-        setLoading(false);
         return;
       }
- 
+
       try {
         const storyblokApi = getStoryblokApi();
- 
-        // Batch fetch the stories using their UUIDs
+
+        // Fetch articles using their UUIDs
         const { data } = await storyblokApi.get("cdn/stories", {
           version: "draft", // or 'published'
           by_uuids: blok.artikelen.join(","), // Join the UUIDs into a comma-separated string
         });
- 
+
         // Format the fetched articles
         const formattedArtikelen = data.stories.map((artikel) => ({
           titel: artikel.content.titel || artikel.name,
@@ -29,29 +27,25 @@ const PopulaireArtikelen = ({ blok }) => {
           afbeelding: artikel.content.afbeelding || null,
           slug: artikel.full_slug,
         }));
- 
+
         setArtikelen(formattedArtikelen);
       } catch (error) {
         console.error("Failed to fetch articles", error);
-      } finally {
-        setLoading(false);
       }
     };
- 
+
     fetchArtikelen();
   }, [blok.artikelen]);
- 
+
   return (
     <section className="p-6 lg:px-24" {...storyblokEditable(blok)}>
       {/* Render the headline */}
       <p className="text-h2-desktop font-bold mb-6">
         {blok.headline || "Populaire Artikelen"}
       </p>
- 
-      {/* Loading state */}
-      {loading ? (
-        <p className="text-gray-500">Artikelen laden...</p>
-      ) : artikelen.length > 0 ? (
+
+      {/* Directly render articles */}
+      {artikelen.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {artikelen.map((artikel, index) => (
             <ArtikelTeaser
@@ -72,7 +66,5 @@ const PopulaireArtikelen = ({ blok }) => {
     </section>
   );
 };
- 
+
 export default PopulaireArtikelen;
- 
- 
