@@ -31,7 +31,7 @@ import EventsOverzicht from "./EventsOverzicht/EventsOverzicht";
 import achtergrondblok from "./Workshop/Workshop_blok";
 import Artikelfooter from "./Artikelfoot/Artikelfoot";
 import Workshop_blok from "./Workshop/Workshop_blok";
-
+import Home_header from "./Home_header/Home_header";
 
 const components = {
   page: Page,
@@ -60,6 +60,7 @@ const components = {
   populaireartikelen: PopulaireArtikelen,
   artikelteaser: ArtikelTeaser,
   artikelcontainer: ArtikelContainer,
+  home_header: Home_header,
 };
 
 storyblokInit({

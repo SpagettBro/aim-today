@@ -10,7 +10,7 @@ const Home_net_binnen = ({ blok }) => (
   <div className="relative w-full px-4" {...storyblokEditable(blok)}>
     <div className="relative w-full max-w-[350px] mx-auto mt-4">
       {/* Oranje achtergrondvlak achter de afbeelding */}
-      <div className="absolute inset-0 bg-orange-500 rounded-md transform translate-x-2 translate-y-2"></div>
+      <div className="absolute inset-0 bg-oranje rounded-md transform translate-x-2 translate-y-2"></div>
 
       {/* Hoofdafbeelding */}
       <Image

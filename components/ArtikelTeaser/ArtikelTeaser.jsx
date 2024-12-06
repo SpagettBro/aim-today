@@ -13,7 +13,7 @@ const ArtikelTeaser = ({ artikel, highlight }) => {
       <div className="p-6 bg-white rounded-xl">
         <div className="relative">
           {/* Oranje achtergrond voor de afbeelding */}
-          <div className="absolute -bottom-2 -right-2 w-full h-full bg-orange-500 rounded-xl z-0"></div>
+          <div className="absolute -bottom-2 -right-2 w-full h-full bg-oranje rounded-xl z-0"></div>
           {/* Afbeelding */}
           <img
             className="relative object-cover object-center w-full mb-8 lg:h-48 md:h-36 rounded-xl z-10"

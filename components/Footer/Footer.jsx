@@ -12,52 +12,52 @@ const Footer = ({ blok }) => (
         {/* Mobile: Stacked Links in Flex Columns */}
         <ul className="space-y-4 text-center md:hidden flex flex-wrap justify-center font-inter">
           <li className="w-1/2 mt-2">
-            <a href="#" className="hover:text-orange-500">
+            <a href="#" className="hover:text-oranje">
               Nieuws
             </a>
           </li>
           <li className="w-1/2">
-            <a href="#" className="hover:text-orange-500">
+            <a href="#" className="hover:text-oranje">
               Interviews
             </a>
           </li>
           <li className="w-1/2">
-            <a href="#" className="hover:text-orange-500">
+            <a href="#" className="hover:text-oranje">
               Artikels
             </a>
           </li>
           <li className="w-1/2">
-            <a href="#" className="hover:text-orange-500">
+            <a href="#" className="hover:text-oranje">
               Evenementen
             </a>
           </li>
           <li className="w-1/2">
-            <a href="#" className="hover:text-orange-500">
+            <a href="#" className="hover:text-oranje">
               Webinars
             </a>
           </li>
           <li className="w-1/2">
-            <a href="#" className="hover:text-orange-500">
+            <a href="#" className="hover:text-oranje">
               Vacatures
             </a>
           </li>
           <li className="w-1/2">
-            <a href="#" className="hover:text-orange-500">
+            <a href="#" className="hover:text-oranje">
               Contact
             </a>
           </li>
           <li className="w-1/2">
-            <a href="#" className="hover:text-orange-500">
+            <a href="#" className="hover:text-oranje">
               Team
             </a>
           </li>
           <li className="w-1/2">
-            <a href="#" className="hover:text-orange-500">
+            <a href="#" className="hover:text-oranje">
               Over
             </a>
           </li>
           <li className="w-1/2">
-            <a href="#" className="hover:text-orange-500">
+            <a href="#" className="hover:text-oranje">
               Nieuwsbrief
             </a>
           </li>
@@ -66,54 +66,54 @@ const Footer = ({ blok }) => (
         <div className="hidden md:grid grid-cols-2 gap-x-8 gap-y-4 text-left">
           <ul className="space-y-4">
             <li>
-              <a href="#" className="hover:text-orange-500">
+              <a href="#" className="hover:text-oranje">
                 Nieuws
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-orange-500">
+              <a href="#" className="hover:text-oranje">
                 Interviews
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-orange-500">
+              <a href="#" className="hover:text-oranje">
                 Artikels
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-orange-500">
+              <a href="#" className="hover:text-oranje">
                 Evenementen
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-orange-500">
+              <a href="#" className="hover:text-oranje">
                 Webinars
               </a>
             </li>
           </ul>
           <ul className="space-y-4">
             <li>
-              <a href="#" className="hover:text-orange-500">
+              <a href="#" className="hover:text-oranje">
                 Vacatures
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-orange-500">
+              <a href="#" className="hover:text-oranje">
                 Contact
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-orange-500">
+              <a href="#" className="hover:text-oranje">
                 Team
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-orange-500">
+              <a href="#" className="hover:text-oranje">
                 Over
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-orange-500">
+              <a href="#" className="hover:text-oranje">
                 Nieuwsbrief
               </a>
             </li>
@@ -140,9 +140,9 @@ const Footer = ({ blok }) => (
           <input
             type="email"
             placeholder="email@gmail.com"
-            className="flex-grow px-4 py-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+            className="flex-grow px-4 py-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-oranje"
           />
-          <button className="px-4 py-2 bg-orange-500 text-white rounded-r-lg hover:bg-orange-600 focus:outline-none">
+          <button className="px-4 py-2 bg-oranje text-white rounded-r-lg hover:bg-orange-600 focus:outline-none">
             ⟶
           </button>
         </div>
