@@ -6,7 +6,7 @@ const Footer = ({ blok }) => (
     {...storyblokEditable(blok)}
   >
     {/* Main Content */}
-    <div className="md:flex md:justify-between md:items-start md:w-full md:max-w-[1200px] md:mx-auto">
+    <div className="md:flex md:justify-between md:items-start md:w-full md:max-w-[1200px] md:mx-auto ">
       {/* Links Section */}
       <div className="md:w-[322px]">
         {/* Mobile: Stacked Links in Flex Columns */}
