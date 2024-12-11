@@ -156,7 +156,6 @@ const Footer = ({ blok }) => (
               type="text"
               name="b_4564b0a1d61a29a6ea2701a1c_b3252484f9"
               tabIndex="-1"
-              value=""
               className="hidden"
             />
             {/* Submit Button */}
