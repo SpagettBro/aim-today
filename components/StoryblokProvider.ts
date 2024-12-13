@@ -20,7 +20,6 @@ import Inschrijven from "./Inschrijven/Inschrijven";
 import Slideshow from "./Slideshow/Slideshow";
 import ReactieSectie from "./ReactieSectie/ReactieSectie";
 import Artikelshare from "./Artikelshare/Artikelshare";
-import Blok_container from "./Blok_container/Blok_container";
 import Net_binnen_artikel from "./Net_binnen_artikel/Net_binnen_artikel";
 import Artikel from "./Artikel/Artikel";
 import PopulaireArtikelen from "./PopulaireArtikelen/PopulaireArtikelen";
@@ -48,7 +47,6 @@ const components = {
   markting: Markting,
   home_afbeelding: Home_afbeelding,
   inschrijven_heading: Inschrijven_heading,
-  blok_container: Blok_container,
   net_binnen_artikel: Net_binnen_artikel,
   workshop: Workshop,
   Workshop_blok: Workshop_blok,
