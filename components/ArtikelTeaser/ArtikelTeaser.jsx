@@ -15,6 +15,12 @@ const ArtikelTeaser = ({ artikel }) => {
       {/* Afbeelding */}
       <div>
         <div className="relative mb-8">
+          {/* Label rechtsboven */}
+          {artikel.label && (
+            <div className="absolute top-4 right-4 bg-donkerBlauw text-white text-sm font-semibold py-1 px-4 rounded-lg border border-white z-20">
+              {artikel.label}
+            </div>
+          )}
           <div className="absolute -bottom-2 -right-2 w-full h-full bg-donkerOranje rounded-xl z-0"></div>
           <img
             className="relative object-cover object-center w-full h-48 rounded-xl z-10"
