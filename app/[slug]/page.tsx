@@ -1,16 +1,14 @@
-import type { NextPage } from "next";
+import { Metadata } from 'next'; // Als je dit gebruikt voor metadata
 import fetchData from "@utils/fetch-data";
 import StoryblokStory from "@storyblok/react/story";
 import { notFound } from "next/navigation";
 
-interface Props {
-  params: {
-    slug: string;
-  };
+interface PageProps {
+  params: Promise<{ slug: string }>;
 }
 
-const Page: NextPage<Props> = async ({ params }) => {
-  const { slug } = params;
+const Page = async ({ params }: PageProps) => {
+  const { slug } = await params;
   const { data, status } = await fetchData(slug);
 
   if (status === 404) {
