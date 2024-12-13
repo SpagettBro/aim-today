@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import fetchData from "@utils/fetch-data";
 import StoryblokStory from "@storyblok/react/story";
 import { notFound } from "next/navigation";
@@ -19,11 +20,11 @@ export default async function Page({ params: { slug } }: Props) {
   );
 }
 
-export async function generateMetadata({ params }: Props) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { data } = await fetchData(params.slug);
 
   return {
     title: data.story.name,
-    // Voeg meer metadata toe indien nodig
+    // Voeg andere metadata toe als nodig
   };
 }

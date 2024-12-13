@@ -2,6 +2,8 @@ import type { NextPage } from "next";
 import fetchData from "@utils/fetch-data";
 import StoryblokStory from "@storyblok/react/story";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
+
  
 type Props = {
   params: { slug: string };
