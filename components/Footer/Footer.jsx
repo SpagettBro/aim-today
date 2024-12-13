@@ -2,17 +2,17 @@ import { storyblokEditable } from "@storyblok/react/rsc";
 
 const Footer = ({ blok }) => (
   <div
-    className="bg-gray-100 py-1 px-4 md:py-[20px] dark:bg-[#1E1E1E] dark:text-white" // Dark background and text color
+    className="bg-grijs py-2 px-4 md:pt-[60px] md:pb-[20px] dark:bg-[#1E1E1E] dark:text-white" // Dark background and text color
     {...storyblokEditable(blok)}
   >
     {/* Main Content */}
-    <div className="md:flex md:justify-between md:items-start md:w-full md:max-w-[1200px] md:mx-auto">
+    <div className="md:flex md:justify-between md:items-start md:w-full md:max-w-[1200px] md:mx-auto ">
       {/* Links Section */}
       <div className="md:w-[322px]">
         {/* Mobile: Stacked Links in Flex Columns */}
-        <ul className="space-y-4 text-center md:hidden flex flex-wrap justify-center font-inter dark:text-white">
+        <ul className="space-y-4 text-center md:hidden flex flex-wrap justify-center font-inter">
           <li className="w-1/2 mt-2">
-            <a href="#" className="hover:text-oranje dark:hover:text-orange-500">
+            <a href="#" className="hover:text-oranje">
               Nieuws
             </a>
           </li>
@@ -125,7 +125,7 @@ const Footer = ({ blok }) => (
         <div className="h-[1px] bg-gray-300 dark:bg-[#FFFFFF] hidden md:block w-[1200px] mt-[35px]" />
 
         {/* Logo */}
-        <div className="mt-6 flex justify-center md:justify-start">
+        <div className="mt-6 md:mt-4 flex justify-center md:justify-start">
           <img
             src={blok.logo.filename}
             alt="AIM TODAY"
@@ -143,7 +143,7 @@ const Footer = ({ blok }) => (
           <input
             type="email"
             placeholder="email@gmail.com"
-            className="flex-grow px-4 py-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-oranje dark:bg-[#1E1E1E] dark:text-white"
+            className="flex-grow px-4 py-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-oranje"
           />
           <button className="px-4 py-2 bg-oranje text-white rounded-r-lg hover:bg-orange-600 focus:outline-none">
             ⟶
@@ -152,7 +152,7 @@ const Footer = ({ blok }) => (
       </div>
 
       {/* Social Media Icons */}
-      <div className="md:mt-[230px] flex gap-6 justify-center md:justify-end w-full md:w-auto dark:text-[#EAEAEA]">
+      <div className="md:mt-[230px] flex gap-6 justify-center md:justify-end w-full md:w-auto">
         {[
           "instagram_icon",
           "facebook_icon",
