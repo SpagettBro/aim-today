@@ -28,6 +28,7 @@ const PopulaireArtikelen = ({ blok }) => {
           slug: artikel.full_slug,
           datum: artikel.content.datum || "Geen datum", // Voeg datum toe
           auteur: artikel.content.auteur || "Geen auteur", // Voeg auteur toe
+          label: artikel.content.label || "",
         }));
 
         setArtikelen(formattedArtikelen);
