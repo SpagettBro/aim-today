@@ -3,13 +3,15 @@ import { render } from "storyblok-rich-text-react-renderer";
 
 const Inschrijven_heading = ({ blok }) => (
   <div
-    className="max-w-screen-lg ml-5 mt-8  text-[#2a3a4b] flex flex-col md:mx-auto"
+    className="max-w-screen-lg ml-5 mt-8 text-[#2a3a4b] flex flex-col md:mx-auto dark:text-white"
     {...storyblokEditable(blok)}
   >
-    <div className="text-2xl mb-1 font-bold font-dm">
+    <div className="text-2xl mb-1 font-bold font-dm dark:text-orange-400">
       {render(blok.heading)}
     </div>
-    <div className="text-sm font-montserrat">{render(blok.sentence)}</div>
+    <div className="text-sm font-montserrat dark:text-gray-400">
+      {render(blok.sentence)}
+    </div>
   </div>
 );
 

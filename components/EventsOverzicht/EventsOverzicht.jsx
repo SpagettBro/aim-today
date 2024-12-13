@@ -4,7 +4,7 @@ import { render } from "storyblok-rich-text-react-renderer";
 
 const EventsOverzicht = ({ blok }) => (
   <div
-    className="max-w-screen-md mx-5 md:mx-auto my-8 text-[#2a3a4b]"
+    className="max-w-screen-md mx-5 md:mx-auto my-8 text-[#2a3a4b] dark:text-gray-100"
     {...storyblokEditable(blok)}
   >
     {/* Heading */}
@@ -17,13 +17,13 @@ const EventsOverzicht = ({ blok }) => (
       {blok.events.map((event, index) => (
         <div key={index} className="flex flex-col">
           <div
-            className="flex flex-col md:flex-row items-start bg-white rounded-lg overflow-hidden group"
+            className="flex flex-col md:flex-row items-start bg-white dark:bg-darkGrijs rounded-lg overflow-hidden group"
             {...storyblokEditable(event)}
           >
             {/* Afbeelding links*/}
             {event.image && (
               <div className="w-full md:w-1/2 mr-4 relative cursor-pointer group-hover:cursor-pointer">
-                <div className="relative rounded-lg overflow-hidden shadow-[5px_5px_0_0_#e76f51] h-[200px]">
+                <div className="relative rounded-lg overflow-hidden shadow-[5px_5px_0_0_#e76f51] dark:shadow-[5px_5px_0_0_#b75840] h-[200px]">
                   <img
                     src={event.image}
                     alt={event.image.alt || "Event afbeelding"}
@@ -37,10 +37,10 @@ const EventsOverzicht = ({ blok }) => (
             <div className="flex flex-col justify-between p-4 md:p-6 w-full md:w-2/3">
               {/* Titel en organisator */}
               <div className="mb-4">
-                <h3 className="text-xl font-bold font-dm mb-1 transition-all duration-300 group-hover:text-[#e76f51] cursor-pointer group-hover:underline">
+                <h3 className="text-xl font-bold font-dm mb-1 transition-all duration-300 group-hover:text-[#e76f51] dark:group-hover:text-[#f4a261] cursor-pointer group-hover:underline">
                   {event.title ? render(event.title) : "Event Titel"}
                 </h3>
-                <p className="text-md font-light">
+                <p className="text-md font-light dark:text-gray-400">
                   {event.organisator
                     ? render(event.organisator)
                     : "Door onbekende organisator"}
@@ -55,7 +55,7 @@ const EventsOverzicht = ({ blok }) => (
                     {event.tags.map((tag, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 border border-[#e76f51] bg-[#ffd8ce] text-[#e76f51] text-sm rounded-full"
+                        className="px-3 py-1 border border-[#e76f51] dark:border-[#f4a261] bg-[#ffd8ce] dark:bg-[#3d3d3d] text-[#e76f51] dark:text-[#f4a261] text-sm rounded-full"
                       >
                         {tag.name || tag}
                       </span>
@@ -64,10 +64,10 @@ const EventsOverzicht = ({ blok }) => (
                 )}
 
                 {/* Datum */}
-                <p className="flex items-center text-[#2a3a4b] font-semibold font-montserrat">
+                <p className="flex items-center text-[#2a3a4b] dark:text-gray-200 font-semibold font-montserrat">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 mr-2 text-[#2a3a4b]"
+                    className="h-5 w-5 mr-2 text-[#2a3a4b] dark:text-gray-200"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -85,8 +85,10 @@ const EventsOverzicht = ({ blok }) => (
             </div>
           </div>
 
-          {/* Grijze line */}
-          {event.line && <div className="border-b border-gray-300 mt-7"></div>}
+          {/* Grijze lijn */}
+          {event.line && (
+            <div className="border-b border-gray-300 dark:border-gray-700 mt-7"></div>
+          )}
         </div>
       ))}
     </div>

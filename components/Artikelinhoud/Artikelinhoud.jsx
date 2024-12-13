@@ -3,7 +3,7 @@ import { render } from "storyblok-rich-text-react-renderer";
 
 const Artikelinhoud = ({ blok }) => (
   <div
-    className="mx-4 my-8 text-sm font-inter lg:w-1/2 lg:mx-auto lg:grid lg:columns-12"
+    className="mx-4 my-8 text-sm font-inter lg:w-1/2 lg:mx-auto lg:grid lg:columns-12 dark:bg-darkGrijs dark:text-[#EAEAEA]"
     {...storyblokEditable(blok)}
   >
     <div>
