@@ -4,12 +4,12 @@ import StoryblokStory from "@storyblok/react/story";
 import { notFound } from "next/navigation";
 
 interface PageProps {
-  params: { slug?: string };
+  params: { slug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
 }
 
-const Page = async ({ params }: PageProps) => {
-  const slug = params.slug || 'home'; // Default to 'home' if no slug is provided
-  const { data, status } = await fetchData(slug);
+export default async function Page({ params }: PageProps) {
+  const { data, status } = await fetchData(params.slug);
 
   if (status === 404) {
     return notFound();
@@ -20,13 +20,10 @@ const Page = async ({ params }: PageProps) => {
       <StoryblokStory story={data.story} />
     </div>
   );
-};
-
-export default Page;
+}
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const slug = params.slug || 'home';
-  const { data } = await fetchData(slug);
+  const { data } = await fetchData(params.slug);
 
   return {
     title: data.story.name,
