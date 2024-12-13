@@ -23,13 +23,19 @@ const ArtikelTeaser = ({ artikel }) => {
           />
         </div>
 
+        {/* Datum en Auteur */}
+        <div className="flex justify-between text-sm text-gray-500 font-inter mb-4">
+          <span>{artikel.datum}</span>
+          <span>{artikel.auteur}</span>
+        </div>
+
         {/* Titel */}
         <h2 className="text-lg font-semibold font-dm leading-none text-donkerBlauw dark:text-donkerOffWhite mb-4">
           {artikel.titel || "Geen titel"}
         </h2>
 
         {/* Subtitel */}
-        <p className="text-sm leading-relaxed text-lijnDonker dark:text-offWhite dark:text-opacity-80	 mb-4 font-inter">
+        <p className="text-sm leading-relaxed text-lijnDonker dark:text-offWhite dark:text-opacity-80 mb-4 font-inter">
           {artikel.subtitel || "Geen teaser beschikbaar"}
         </p>
       </div>
@@ -38,7 +44,7 @@ const ArtikelTeaser = ({ artikel }) => {
       <div className="mt-auto">
         <Link
           href="/artikel"
-          className="inline-block mt-4 font-semibold font-montserrat text-oranje hover:text-donkerBlauw dark:hover:text-donkerOffWhit"
+          className="inline-block mt-4 font-semibold font-montserrat text-oranje hover:text-donkerBlauw dark:hover:text-donkerOffWhite"
           title="Lees meer"
         >
           Lees meer »
