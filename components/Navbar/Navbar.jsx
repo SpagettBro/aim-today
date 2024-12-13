@@ -26,11 +26,13 @@ const Navbar = ({ blok }) => {
     >
       <div className="flex items-center justify-between max-w-7xl mx-auto py-3">
         <div className="flex-shrink-0">
-          <img
-            src={blok.logo.filename}
-            alt={blok.logo.alt || "News Logo"}
-            className="h-[50px] w-auto"
-          />
+          <a href="/">
+            <img
+              src={blok.logo.filename}
+              alt={blok.logo.alt || "News Logo"}
+              className="h-[50px] w-auto"
+            />
+          </a>
         </div>
 
         <div className="flex items-center justify-between flex-grow ml-[30px]">
@@ -80,16 +82,19 @@ const Navbar = ({ blok }) => {
           onClick={toggleMenu}
         >
           <span
-            className={`block w-6 h-0.5 bg-gray-500 mb-1 transition-all duration-300 ${menuOpen ? "transform rotate-45" : ""
-              }`}
+            className={`block w-6 h-0.5 bg-gray-500 mb-1 transition-all duration-300 ${
+              menuOpen ? "transform rotate-45" : ""
+            }`}
           ></span>
           <span
-            className={`block w-6 h-0.5 bg-gray-500 mb-1 transition-all duration-300 ${menuOpen ? "hidden" : ""
-              }`}
+            className={`block w-6 h-0.5 bg-gray-500 mb-1 transition-all duration-300 ${
+              menuOpen ? "hidden" : ""
+            }`}
           ></span>
           <span
-            className={`block w-6 h-0.5 bg-gray-500 transition-all duration-300 ${menuOpen ? "-rotate-45" : ""
-              }`}
+            className={`block w-6 h-0.5 bg-gray-500 transition-all duration-300 ${
+              menuOpen ? "-rotate-45" : ""
+            }`}
           ></span>
         </button>
       </div>
@@ -102,6 +107,7 @@ const Navbar = ({ blok }) => {
               alt={blok.logo.alt || "News Logo"}
               className="h-[50px] w-auto"
             />
+
             <button
               onClick={toggleMenu}
               className="text-[#2A3A4B] hover:text-black transition duration-300 focus:outline-none dark:text-white"

@@ -37,8 +37,8 @@ const ArtikelTeaser = ({ artikel }) => {
       {/* Lees meer link */}
       <div className="mt-auto">
         <Link
-          href={`/${artikel.slug}`}
-          className="inline-block mt-4 font-semibold font-montserrat text-donkerOranje hover:text-donkerBlauw dark:hover:text-donkerOffWhite"
+          href="/artikel"
+          className="inline-block mt-4 font-semibold font-montserrat text-oranje hover:text-donkerBlauw dark:hover:text-donkerOffWhit"
           title="Lees meer"
         >
           Lees meer »
