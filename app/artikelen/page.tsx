@@ -1,12 +1,12 @@
 import { getStoryblokApi } from "@storyblok/react";
-import Link from 'next/link';
+import Link from "next/link";
 
 async function getArticles() {
   const storyblokApi = getStoryblokApi();
-  const response = await storyblokApi.get('cdn/stories', {
-    version: 'draft',
-    starts_with: 'artikelen/',
-    is_startpage: false
+  const response = await storyblokApi.get("cdn/stories", {
+    version: "draft",
+    starts_with: "artikelen/",
+    is_startpage: false,
   });
   return response.data.stories;
 }
@@ -29,4 +29,3 @@ export default async function ArticlesPage() {
     </div>
   );
 }
-

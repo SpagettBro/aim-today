@@ -1,16 +1,13 @@
-import { Metadata } from 'next';
 import fetchData from "@utils/fetch-data";
 import StoryblokStory from "@storyblok/react/story";
 import { notFound } from "next/navigation";
 
-interface PageProps {
+type Props = {
   params: { slug: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-}
+};
 
-export default async function Page({ params }: PageProps) {
-  const { data, status } = await fetchData(params.slug);
-
+export default async function Page({ params: { slug } }: Props) {
+  const { data, status } = await fetchData(slug);
   if (status === 404) {
     return notFound();
   }
@@ -22,12 +19,11 @@ export default async function Page({ params }: PageProps) {
   );
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: Props) {
   const { data } = await fetchData(params.slug);
 
   return {
     title: data.story.name,
-    // Add other metadata properties as needed
+    // Voeg meer metadata toe indien nodig
   };
 }
-
