@@ -2,7 +2,7 @@ import { storyblokEditable } from "@storyblok/react/rsc";
 
 const Footer = ({ blok }) => (
   <div
-    className="bg-grijs py-2 px-4 md:pt-[60px] md:pb-[20px]"
+    className="bg-grijs py-2 px-4 md:pt-[60px] dark:bg-[#1E1E1E] dark:text-white md:pb-[20px]"
     {...storyblokEditable(blok)}
   >
     {/* Main Content */}
@@ -133,7 +133,7 @@ const Footer = ({ blok }) => (
 
       {/* Newsletter Section */}
       <div className="md:w-[430px] w-full flex flex-col items-center md:items-start mt-8 mr-[-700px] md:mt-0">
-        <p className="text-lg font-medium text-gray-700 mb-4 text-center md:text-left">
+        <p className="text-lg font-medium text-gray-700 mb-4 text-center dark:text-white md:text-left">
           Meld je aan voor de nieuwsbrief
         </p>
         <div className="flex w-full mb-6 border-[2px] border-oranje rounded-lg">
@@ -170,7 +170,7 @@ const Footer = ({ blok }) => (
       </div>
 
       {/* Social Media Icons */}
-      <div className="md:mt-[240px] md:mb-0 mb-4 flex gap-6 justify-center md:justify-end w-full md:w-auto">
+      <div className="md:mt-[240px] md:mb-0  mb-4 flex gap-6 justify-center md:justify-end w-full md:w-auto">
         {[
           "instagram_icon",
           "facebook_icon",
