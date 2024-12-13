@@ -8,7 +8,7 @@ const Paragrafen_ad = ({ blok }) => (
     {/* Horizontale lijn en tekst */}
     <div className="flex flex-col items-center">
       <hr className="border-t-2 border-orange-500 mb-2" style={{ width: "204px" }} />
-      <p className="font-montserrat text-sm text-gray-600 text-center">
+      <p className="font-montserrat text-sm text-gray-600 dark:text-offWhite text-center">
         {blok.tekst || "Lees verder onder advertentie"}
       </p>
     </div>

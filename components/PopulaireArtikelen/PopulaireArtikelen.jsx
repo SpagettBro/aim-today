@@ -38,7 +38,7 @@ const PopulaireArtikelen = ({ blok }) => {
   }, [blok.artikelen]);
 
   // Dynamische klasse voor de tekstkleur op basis van blok.check
-  const headlineTextColorClass = blok.check ? "text-oranje" : "text-donkerBlauw";
+  const headlineTextColorClass = blok.check ? "text-oranje dark:text-donkerOffWhite" : "text-donkerBlauw dark:text-lijnDonker";
 
   return (
     <section className="p-4 lg:p-12" {...storyblokEditable(blok)}>
