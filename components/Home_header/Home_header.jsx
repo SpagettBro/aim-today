@@ -7,11 +7,11 @@ const Home_header = ({ blok }) => (
   >
     <div className="relative w-full md:w-[1200px] h-auto mx-auto">
       {/* Oranje vlak - wordt onder de afbeelding geplaatst */}
-      <div className="absolute w-[360px] h-[223px] sm:w-[1200px] sm:h-[450px] bg-orange-500 top-2 px-5 left-2 rounded-lg z-[-1]"></div>
+      <div className="absolute w-[360px] h-[223px] sm:w-[1200px] sm:h-[450px] bg-orange-500 top-2 px-5 left-2 rounded-lg z-[-1] hidden sm:block"></div>
 
       {/* Afbeelding - wordt verborgen op mobiel */}
       <img
-        className="w-full h-auto sm:w-[1200px] sm:h-[450px] object-cover z-10 rounded-lg px-5 sm:px-0 hidden sm:block" // Verberg afbeelding op mobiel
+        className="w-full h-auto sm:w-[1200px] sm:h-[450px] object-cover z-10 rounded-lg px-5 sm:px-0 hidden sm:block pl" // Verberg afbeelding op mobiel
         src={blok.artikelheaderfoto.filename}
         alt="header afbeelding"
       />
