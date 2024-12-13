@@ -1,6 +1,7 @@
 import React from "react";
 import { storyblokEditable } from "@storyblok/react/rsc";
-import Net_binnen_artikel from "../Net_binnen_artikel/Net_binnen_artikel";
+import PopulaireArtikelen from "@components/PopulaireArtikelen/PopulaireArtikelen";
+import Workshop_blok from "@components/Workshop/Workshop_blok";
 
 
 
@@ -21,9 +22,11 @@ const Blok_container = ({ blok }) => {
               }
               */
             }
-            if (nestedBlok.component === "net_binnen_artikel") {
-              return <Net_binnen_artikel blok={nestedBlok} key={nestedBlok._uid} />;
-            } 
+            if (nestedBlok.component === "populaireartikelen") {
+              return <PopulaireArtikelen blok={nestedBlok} key={nestedBlok._uid} />;
+            } else if (nestedBlok.component === "Workshop_blok") {
+               return <Workshop_blok blok={nestedBlok} key={nestedBlok._uid} />;
+              }
             return null;
           })}
       </div>
