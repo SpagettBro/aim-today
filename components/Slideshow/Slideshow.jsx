@@ -40,7 +40,7 @@ const Slideshow = ({ blok }) => {
 
   return (
     <div
-      className="max-w-screen-lg m-5 mt-6 text-[#2a3a4b] flex flex-col md:mx-auto relative"
+      className="max-w-screen-lg m-5 mt-6 text-[#2a3a4b] dark:text-gray-100 flex flex-col md:mx-auto relative"
       {...storyblokEditable(blok)}
     >
       {/* Heading */}
@@ -52,14 +52,14 @@ const Slideshow = ({ blok }) => {
       <div className="relative">
         {/* Linkse Gradient */}
         {canScrollLeft && (
-          <div className="absolute left-0 top-0 h-full w-28 bg-gradient-to-r from-white to-transparent pointer-events-none z-20"></div>
+          <div className="absolute left-0 top-0 h-full w-28 bg-gradient-to-r from-white to-transparent dark:from-gray-900 pointer-events-none z-20"></div>
         )}
 
         {/* Scroll knop links */}
         {canScrollLeft && (
           <button
             onClick={() => scroll("left")}
-            className="absolute left-1 top-1/3 transform -translate-y-1/2 bg-[#2a3a4b] text-white p-2 rounded-full shadow-md z-30"
+            className="absolute left-1 top-1/3 transform -translate-y-1/2 bg-[#2a3a4b] dark:bg-gray-700 text-white p-2 rounded-full shadow-md z-30"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -91,10 +91,10 @@ const Slideshow = ({ blok }) => {
           {slides.map((slide, index) => (
             <div
               key={index}
-              className="min-w-[calc(100%-1rem)] md:min-w-[calc(33.333%-1rem)] flex-shrink-0 rounded-lg bg-white snap-start"
+              className="min-w-[calc(100%-1rem)] md:min-w-[calc(33.333%-1rem)] flex-shrink-0 rounded-lg bg-white dark:bg-gray-800 snap-start"
             >
               {/* Container voor afbeelding en border */}
-              <div className="relative rounded-lg shadow-[5px_5px_0_0_#e76f51] overflow-hidden">
+              <div className="relative rounded-lg shadow-[5px_5px_0_0_#e76f51] dark:shadow-[5px_5px_0_0_#b75840] overflow-hidden">
                 {/* Afbeelding */}
                 <img
                   src={slide.image}
@@ -105,10 +105,10 @@ const Slideshow = ({ blok }) => {
 
               {/* Informatie onder de afbeelding */}
               <div className="p-4 pl-0">
-                <p className="text-sm text-[#2a3a4b]-600 m-1 ml-0">
+                <p className="text-sm text-[#2a3a4b] dark:text-gray-400 m-1 ml-0">
                   {slide.date ? render(slide.date) : null}
                 </p>
-                <h3 className="text-lg font-bold text-[#2a3a4b] max-w-[300px] m-2 ml-0">
+                <h3 className="text-lg font-bold text-[#2a3a4b] dark:text-gray-100 max-w-[300px] m-2 ml-0">
                   {slide.title ? render(slide.title) : null}
                 </h3>
               </div>
@@ -118,14 +118,14 @@ const Slideshow = ({ blok }) => {
 
         {/* Rechste Gradient */}
         {canScrollRight && (
-          <div className="absolute right-0 top-0 h-full w-28 bg-gradient-to-l from-white to-transparent pointer-events-none z-20"></div>
+          <div className="absolute right-0 top-0 h-full w-28 bg-gradient-to-l from-white to-transparent dark:from-gray-900 pointer-events-none z-20"></div>
         )}
 
         {/* Scroll knop rechts */}
         {canScrollRight && (
           <button
             onClick={() => scroll("right")}
-            className="absolute right-1 top-1/3 transform -translate-y-1/2 bg-[#2a3a4b] text-white p-2 rounded-full shadow-md z-30"
+            className="absolute right-1 top-1/3 transform -translate-y-1/2 bg-[#2a3a4b] dark:bg-gray-700 text-white p-2 rounded-full shadow-md z-30"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

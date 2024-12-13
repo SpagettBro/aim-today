@@ -21,7 +21,7 @@ const Navbar = ({ blok }) => {
 
   return (
     <header
-      className="bg-white w-full border-b border-gray-300 dark:border-[#121212] z-10 px-6 dark:bg-[#121212] dark:text-white"
+      className="bg-white w-full border-b border-gray-300 dark:border-[#121212] z-10 px-6 dark:bg-[#1E1E1E] dark:text-white"
       {...storyblokEditable(blok)}
     >
       <div className="flex items-center justify-between max-w-7xl mx-auto py-3">
