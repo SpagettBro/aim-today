@@ -1,18 +1,14 @@
-import type { NextPage } from "next";
+import { Metadata } from "next";
 import fetchData from "@utils/fetch-data";
 import StoryblokStory from "@storyblok/react/story";
 import { notFound } from "next/navigation";
 
-interface Props {
-  params: {
-    slug: string;
-  };
-}
+type Props = {
+  params: { slug: string };
+};
 
-const Page: NextPage<Props> = async ({ params }) => {
-  const { slug } = params;
+export default async function Page({ params: { slug } }: Props) {
   const { data, status } = await fetchData(slug);
-
   if (status === 404) {
     return notFound();
   }
@@ -22,6 +18,13 @@ const Page: NextPage<Props> = async ({ params }) => {
       <StoryblokStory story={data.story} />
     </div>
   );
-};
+}
 
-export default Page;
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { data } = await fetchData(params.slug);
+
+  return {
+    title: data.story.name,
+    // Voeg andere metadata toe als nodig
+  };
+}
