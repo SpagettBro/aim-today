@@ -45,7 +45,7 @@ const ArtikelContainer = ({ blok }) => {
           <ArtikelTeaser
             artikel={artikel}
             key={artikel.slug}
-            className="w-72 h-auto flex-shrink-0" // Ensure fixed width and height
+            className="w-72 h-auto flex-shrink-0" 
             imgClassName="h-48"
           />
         ))}

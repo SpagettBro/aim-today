@@ -26,8 +26,8 @@ const PopulaireArtikelen = ({ blok }) => {
           subtitel: artikel.content.subtitel || "",
           afbeelding: artikel.content.afbeelding || null,
           slug: artikel.full_slug,
-          datum: artikel.content.datum || "Geen datum", // Voeg datum toe
-          auteur: artikel.content.auteur || "Geen auteur", // Voeg auteur toe
+          datum: artikel.content.datum || "Geen datum", 
+          auteur: artikel.content.auteur || "Geen auteur", 
           label: artikel.content.label || "",
         }));
 

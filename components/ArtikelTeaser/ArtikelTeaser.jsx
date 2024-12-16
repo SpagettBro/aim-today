@@ -17,7 +17,7 @@ const ArtikelTeaser = ({ artikel }) => {
         <div className="relative mb-8">
           {/* Label rechtsboven */}
           {artikel.label && (
-            <div className="absolute top-4 right-4 bg-donkerBlauw text-white text-sm font-semibold py-1 px-4 rounded-lg border border-white z-20">
+            <div className="absolute top-4 right-4 bg-donkerBlauw text-white text-sm font-montserrat py-1 px-4 rounded-lg border border-white z-20">
               {artikel.label}
             </div>
           )}
@@ -30,7 +30,7 @@ const ArtikelTeaser = ({ artikel }) => {
         </div>
 
         {/* Datum en Auteur */}
-        <div className="flex justify-between text-sm text-gray-500 font-inter mb-4">
+        <div className="flex justify-between text-sm text-gray-500 font-montserrat mb-4">
           <span>{artikel.datum}</span>
           <span>{artikel.auteur}</span>
         </div>
@@ -41,7 +41,7 @@ const ArtikelTeaser = ({ artikel }) => {
         </h2>
 
         {/* Subtitel */}
-        <p className="text-sm leading-relaxed text-lijnDonker dark:text-offWhite dark:text-opacity-80 mb-4 font-inter">
+        <p className="text-sm leading-relaxed text-gray-500 dark:text-offWhite dark:text-opacity-80 mb-4 font-inter">
           {artikel.subtitel || "Geen teaser beschikbaar"}
         </p>
       </div>
